@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+// Trigger GitHub Actions build with new Pages settings
 const isGithubPages = process.env.GITHUB_PAGES === 'true';
 const repoName = 'AscentCommerce-Amazon-Growth-Agency';
 
