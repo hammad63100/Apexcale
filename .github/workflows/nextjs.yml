@@ -1,2 +1,16 @@
-# Deployment is handled via `npm run deploy` (gh-pages package)
-# This file is intentionally left minimal to avoid conflicts.
+# GitHub Actions deployment is disabled.
+# This project deploys via: npm run deploy (gh-pages npm package)
+# Run: npm run deploy  →  builds Next.js static export → publishes to gh-pages branch
+
+name: Disabled
+on:
+  workflow_dispatch:
+    inputs:
+      note:
+        description: 'Not used - deploy via npm run deploy instead'
+        required: false
+jobs:
+  info:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Deploy via npm run deploy on your local machine"
