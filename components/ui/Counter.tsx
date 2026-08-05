@@ -30,7 +30,7 @@ export default function Counter({
   }, [inView, value, motionValue]);
 
   useEffect(() => {
-    return spring.on('change', (latest) => {
+    return spring.on('change', (latest: number) => {
       if (ref.current) {
         ref.current.textContent = `${prefix}${latest.toFixed(decimals)}${suffix}`;
       }
