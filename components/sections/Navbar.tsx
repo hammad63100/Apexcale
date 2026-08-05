@@ -84,7 +84,7 @@ export default function Navbar() {
               className="!px-6 !py-3 !text-xs"
               cursorLabel="Talk"
             >
-              Book a Free Audit
+              Schedule a Free Strategy Call
             </MagneticButton>
           </div>
 
@@ -146,7 +146,7 @@ export default function Navbar() {
               className="mt-4"
               onClick={() => setOpen(false)}
             >
-              <MagneticButton variant="filled" className="!px-8 !py-4 !text-sm">Schedule Free a Strategy Call</MagneticButton>
+              <MagneticButton variant="filled" className="!px-8 !py-4 !text-sm">Schedule a Free Strategy Call</MagneticButton>
             </motion.div>
           </motion.div>
         )}
