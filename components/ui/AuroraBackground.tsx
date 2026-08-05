@@ -3,7 +3,7 @@ export default function AuroraBackground({
 }: {
   intensity?: 'normal' | 'strong';
 }) {
-  const opacity = intensity === 'strong' ? 0.55 : 0.38;
+  const opacity = intensity === 'strong' ? 0.30 : 0.18;
   return (
     <div className="aurora-field" aria-hidden="true">
       <div
@@ -13,7 +13,7 @@ export default function AuroraBackground({
           height: 560,
           top: '-10%',
           left: '-8%',
-          background: `radial-gradient(circle, rgba(58,166,240,${opacity}) 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(0, 82, 204, ${opacity}) 0%, transparent 70%)`,
         }}
       />
       <div
@@ -23,7 +23,7 @@ export default function AuroraBackground({
           height: 480,
           top: '10%',
           right: '-10%',
-          background: `radial-gradient(circle, rgba(125,211,252,${opacity}) 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(255, 140, 0, ${opacity * 0.6}) 0%, transparent 70%)`,
         }}
       />
       <div
@@ -33,7 +33,7 @@ export default function AuroraBackground({
           height: 420,
           bottom: '-15%',
           left: '20%',
-          background: `radial-gradient(circle, rgba(196,181,253,${opacity * 0.8}) 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(0, 82, 204, ${opacity * 0.7}) 0%, transparent 70%)`,
         }}
       />
       <div
@@ -43,7 +43,7 @@ export default function AuroraBackground({
           height: 380,
           bottom: '5%',
           right: '15%',
-          background: `radial-gradient(circle, rgba(2,132,199,${opacity * 0.7}) 0%, transparent 70%)`,
+          background: `radial-gradient(circle, rgba(10, 25, 47, ${opacity * 0.5}) 0%, transparent 70%)`,
         }}
       />
     </div>

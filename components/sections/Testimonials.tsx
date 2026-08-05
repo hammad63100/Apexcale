@@ -34,7 +34,7 @@ function Stars() {
           width="16"
           height="16"
           viewBox="0 0 24 24"
-          fill="#FF9900"
+          fill="#FF8C00"
         >
           <path d="M12 2l2.9 6.6 7.1.6-5.4 4.7 1.7 7-6.3-3.9L5.7 21l1.7-7L2 9.2l7.1-.6L12 2z" />
         </motion.svg>
@@ -45,7 +45,7 @@ function Stars() {
 
 function TestimonialCard({ q }: { q: (typeof QUOTES)[number] }) {
   return (
-    <div className="glass mx-2 sm:mx-3 w-[280px] xs:w-[340px] sm:w-[400px] shrink-0 rounded-3xl p-5 sm:p-7" data-cursor="Read">
+    <div className="mx-2 sm:mx-3 w-[280px] xs:w-[340px] sm:w-[400px] shrink-0 rounded-3xl p-5 sm:p-7 bg-[#F4F7FC] border border-primary/8 shadow-glass" data-cursor="Read">
       <Stars />
       <p className="mt-4 sm:mt-5 text-xs sm:text-[15px] leading-relaxed text-navy/80">
         &ldquo;{q.quote}&rdquo;
@@ -72,7 +72,7 @@ export default function Testimonials() {
   const doubled = [...QUOTES, ...QUOTES];
 
   return (
-    <section className="relative overflow-hidden py-20 sm:py-28">
+    <section className="relative overflow-hidden py-20 sm:py-28 bg-white" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="container-px mx-auto mb-10 sm:mb-14 max-w-6xl">
         <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
           Client Testimonials

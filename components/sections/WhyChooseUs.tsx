@@ -67,7 +67,7 @@ function TiltPhoto({ member }: { member: (typeof DIFFERENTIATORS)[number] }) {
 
 export default function WhyChooseUs() {
   return (
-    <section className="relative py-20 sm:py-28">
+    <section className="relative py-20 sm:py-28 bg-white" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="container-px mx-auto max-w-6xl">
         <div className="mb-10 sm:mb-14 max-w-2xl">
           <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">

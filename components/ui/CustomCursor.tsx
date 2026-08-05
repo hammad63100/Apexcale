@@ -68,7 +68,7 @@ export default function CustomCursor() {
       style={{
         width: hovering ? 64 : 16,
         height: hovering ? 64 : 16,
-        background: hovering ? 'rgba(15,41,66,0.9)' : '#0F2942',
+        background: hovering ? 'rgba(10,25,47,0.9)' : '#FF8C00',
       }}
     >
       {label && (

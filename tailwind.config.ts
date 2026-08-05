@@ -8,25 +8,63 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        primary: {
+          DEFAULT: '#0052CC', // Primary Blue (Dominant)
+          light: '#3378DB',
+          dark: '#003D99',
+          50: '#E6F0FF',
+          100: '#CCE0FF',
+          200: '#99C2FF',
+          300: '#66A3FF',
+          400: '#3385FF',
+          500: '#0052CC',
+          600: '#0047B3',
+          700: '#003D99',
+          800: '#002E73',
+          900: '#001F4D',
+        },
+        deep: {
+          DEFAULT: '#0A192F', // Deep Blue (Accent/Text)
+          light: '#122A4A',
+          dark: '#060F1E',
+        },
+        accent: {
+          DEFAULT: '#FF8C00', // Vibrant Orange (Action)
+          light: '#FFA733',
+          dark: '#E07A00',
+          50: '#FFF3E0',
+          100: '#FFE0B2',
+          200: '#FFCC80',
+          300: '#FFB74D',
+          400: '#FFA726',
+          500: '#FF8C00',
+          600: '#E07A00',
+        },
+        clean: {
+          DEFAULT: '#F4F7FC', // Clean Light (Background)
+          dark: '#E8EDF5',
+        },
+        // Legacy aliases for existing classes
         sky: {
-          50: '#F5FAFF',
-          100: '#EAF4FF',
-          200: '#D6ECFF',
-          300: '#AEDBFF',
-          400: '#7DD3FC',
-          500: '#5EC8F0',
-          600: '#3AA6F0',
-          700: '#0284C7',
-          800: '#046198',
-          900: '#0F2942',
+          50: '#E6F0FF',
+          100: '#CCE0FF',
+          200: '#99C2FF',
+          300: '#66A3FF',
+          400: '#3385FF',
+          500: '#0066FF',
+          600: '#0052CC',
+          700: '#0052CC',
+          800: '#003D99',
+          900: '#0A192F',
         },
         navy: {
-          DEFAULT: '#0F2942',
-          light: '#1E293B',
+          DEFAULT: '#0A192F',
+          light: '#0052CC',
         },
         amazon: {
-          DEFAULT: '#FF9900',
-          light: '#FFB347',
+          DEFAULT: '#FF8C00',
+          light: '#FFA733',
+          dark: '#E07A00',
         },
       },
       fontFamily: {
@@ -34,15 +72,19 @@ const config: Config = {
         body: ['var(--font-body)'],
       },
       backgroundImage: {
-        'sky-gradient': 'linear-gradient(180deg, #F5FAFF 0%, #EAF4FF 100%)',
-        'cta-gradient': 'linear-gradient(135deg, #3AA6F0 0%, #0284C7 100%)',
-        'amazon-gradient': 'linear-gradient(135deg, #FF9900 0%, #FFB347 100%)',
+        'sky-gradient': 'linear-gradient(180deg, #FFFFFF 0%, #F4F7FC 100%)',
+        'cta-gradient': 'linear-gradient(135deg, #FF8C00 0%, #FFA733 100%)',
+        'amazon-gradient': 'linear-gradient(135deg, #FF8C00 0%, #FFA733 100%)',
+        'brand-gradient': 'linear-gradient(135deg, #0052CC 0%, #0A192F 100%)',
+        'hero-gradient': 'linear-gradient(180deg, #0A192F 0%, #0D2340 60%, #122A4A 100%)',
+        'results-gradient': 'linear-gradient(180deg, #0A192F 0%, #0D2340 100%)',
+        'cta-section-gradient': 'linear-gradient(135deg, #0052CC 0%, #0A192F 100%)',
       },
       boxShadow: {
-        'glass': '0 8px 32px rgba(56,166,240,0.15)',
-        'glass-lg': '0 20px 60px rgba(56,166,240,0.20)',
-        'glow-orange': '0 0 40px rgba(255,153,0,0.35)',
-        'glow-sky': '0 0 40px rgba(58,166,240,0.35)',
+        'glass': '0 8px 32px rgba(0, 82, 204, 0.10)',
+        'glass-lg': '0 20px 60px rgba(0, 82, 204, 0.16)',
+        'glow-orange': '0 0 40px rgba(255, 140, 0, 0.45)',
+        'glow-sky': '0 0 40px rgba(0, 82, 204, 0.30)',
       },
       backdropBlur: {
         xs: '2px',

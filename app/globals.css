@@ -6,10 +6,10 @@
   --font-display: 'Bricolage Grotesque', sans-serif;
   --font-body: 'Inter', sans-serif;
 
-  --glass-bg: rgba(255, 255, 255, 0.45);
-  --glass-bg-strong: rgba(255, 255, 255, 0.62);
-  --glass-border: rgba(255, 255, 255, 0.6);
-  --glass-shadow: 0 8px 32px rgba(56, 166, 240, 0.15);
+  --glass-bg: rgba(255, 255, 255, 0.72);
+  --glass-bg-strong: rgba(255, 255, 255, 0.88);
+  --glass-border: rgba(0, 82, 204, 0.10);
+  --glass-shadow: 0 8px 32px rgba(0, 82, 204, 0.08);
 }
 
 * {
@@ -33,8 +33,8 @@ html.lenis {
 }
 
 body {
-  background: linear-gradient(180deg, #F5FAFF 0%, #EAF4FF 55%, #F5FAFF 100%);
-  color: #0F2942;
+  background: #FFFFFF;
+  color: #0A192F;
   font-family: var(--font-body);
   overflow-x: clip;
   width: 100%;
@@ -52,8 +52,8 @@ main {
 }
 
 ::selection {
-  background: rgba(58, 166, 240, 0.25);
-  color: #0F2942;
+  background: rgba(0, 82, 204, 0.20);
+  color: #0A192F;
 }
 
 h1, h2, h3, h4, h5 {
@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5 {
   backdrop-filter: blur(24px);
   -webkit-backdrop-filter: blur(24px);
   border: 1px solid var(--glass-border);
-  box-shadow: 0 20px 60px rgba(56, 166, 240, 0.2);
+  box-shadow: 0 20px 60px rgba(0, 82, 204, 0.12);
 }
 
 .glass-border-gradient {
@@ -89,7 +89,7 @@ h1, h2, h3, h4, h5 {
   inset: 0;
   border-radius: inherit;
   padding: 1px;
-  background: linear-gradient(135deg, rgba(58,166,240,0.6), rgba(255,153,0,0.35), rgba(2,132,199,0.5));
+  background: linear-gradient(135deg, rgba(0, 82, 204, 0.5), rgba(255, 140, 0, 0.4), rgba(0, 82, 204, 0.3));
   -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
@@ -126,7 +126,7 @@ h1, h2, h3, h4, h5 {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  background: #0F2942;
+  background: #FF8C00;
   mix-blend-mode: difference;
   pointer-events: none;
   z-index: 9999;
@@ -149,10 +149,10 @@ h1, h2, h3, h4, h5 {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #EAF4FF;
+  background: #F4F7FC;
 }
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #3AA6F0, #0284C7);
+  background: linear-gradient(180deg, #0052CC, #0A192F);
   border-radius: 8px;
 }
 

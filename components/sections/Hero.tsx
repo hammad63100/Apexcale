@@ -19,7 +19,7 @@ export default function Hero() {
   const background = useTransform(
     [springX, springY],
     ([x, y]: number[]) =>
-      `radial-gradient(600px circle at ${x}px ${y}px, rgba(58,166,240,0.16), transparent 70%)`
+      `radial-gradient(600px circle at ${x}px ${y}px, rgba(0,82,204,0.18), transparent 70%)`
   );
 
   useEffect(() => {
@@ -32,7 +32,7 @@ export default function Hero() {
   }, [spotX, spotY]);
 
   return (
-    <section className="relative min-h-[90vh] sm:min-h-screen overflow-hidden pt-32 sm:pt-40 pb-16 sm:pb-24 flex flex-col justify-center">
+    <section className="relative min-h-[90vh] sm:min-h-screen overflow-hidden pt-32 sm:pt-40 pb-16 sm:pb-24 flex flex-col justify-center bg-[#0A192F]" style={{ backgroundColor: '#0A192F' }}>
       <AuroraBackground />
       <motion.div
         className="pointer-events-none absolute inset-0 z-[1]"
@@ -47,7 +47,7 @@ export default function Hero() {
         <TextReveal
           as="h1"
           text="Scale Your Brand to the Top of Amazon — Anywhere in the World"
-          className="mx-auto max-w-4xl font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy text-pretty"
+          className="mx-auto max-w-4xl font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white text-pretty"
           triggerOnView={false}
         />
 
@@ -55,7 +55,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mx-auto mt-4 sm:mt-8 max-w-2xl text-base sm:text-lg text-navy/70 leading-relaxed"
+          className="mx-auto mt-4 sm:mt-8 max-w-2xl text-base sm:text-lg text-[#F4F7FC]/80 leading-relaxed"
         >
           Apexcale is a full-service Amazon growth partner for brands that are serious about scaling profitably. We combine data-driven advertising, conversion-focused listing optimization, and hands-on account management to help you win the Buy Box, dominate search results, and turn your marketplace presence into a predictable revenue engine — across Amazon, Walmart, and every major global marketplace.
         </motion.p>
@@ -64,12 +64,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="mt-8 sm:mt-10 flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 w-full xs:w-auto"
+          className="mt-6 sm:mt-8 flex flex-row items-center justify-center gap-3 sm:gap-4 w-auto flex-wrap sm:flex-nowrap"
         >
-          <MagneticButton variant="filled" cursorLabel="Start" className="w-full xs:w-auto !px-6 !py-3.5 !text-sm">
+          <MagneticButton variant="filled" cursorLabel="Start" className="!px-5 !py-2.5 !text-xs whitespace-nowrap shrink-0">
             Schedule a Free Strategy Call
           </MagneticButton>
-          <MagneticButton variant="glass" cursorLabel="View" className="w-full xs:w-auto !px-6 !py-3.5 !text-sm">
+          <MagneticButton
+            variant="filled"
+            cursorLabel="View"
+            className="!px-5 !py-2.5 !text-xs whitespace-nowrap shrink-0 !text-white !border border-amber-300/40 shadow-md !important"
+            style={{ background: 'linear-gradient(135deg, #FF5E00 0%, #FFAA00 100%) !important' }}
+          >
             View Our Results ↓
           </MagneticButton>
         </motion.div>

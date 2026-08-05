@@ -16,7 +16,8 @@ const body = Inter({
   display: 'swap',
 });
 
-const LOGO_PATH = '/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg';
+const LOGO_PATH = '/assets/logo.jpeg';
+const ICON_PATH = '/assets/favicon.ico';
 
 export const metadata: Metadata = {
   title: 'Apexcale — Scale Your Brand to the Top of Amazon',
@@ -34,9 +35,10 @@ export const metadata: Metadata = {
   ],
   icons: {
     icon: [
+      { url: ICON_PATH, type: 'image/x-icon' },
       { url: LOGO_PATH, type: 'image/jpeg' },
     ],
-    shortcut: LOGO_PATH,
+    shortcut: ICON_PATH,
     apple: LOGO_PATH,
   },
   openGraph: {
@@ -69,8 +71,8 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
       <head>
-        <link rel="icon" href={LOGO_PATH} type="image/jpeg" />
-        <link rel="shortcut icon" href={LOGO_PATH} type="image/jpeg" />
+        <link rel="icon" href={ICON_PATH} />
+        <link rel="shortcut icon" href={ICON_PATH} />
         <link rel="apple-touch-icon" href={LOGO_PATH} />
       </head>
       <body>

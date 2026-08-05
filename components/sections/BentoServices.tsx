@@ -80,18 +80,18 @@ const SERVICES: Service[] = [
     colSpan: 'md:col-span-2 lg:col-span-2',
   },
   {
-    title: 'Trademark Registration',
-    description: 'We guide you through the trademark registration process from filing to approval for complete Brand Registry eligibility.',
-    icon: <Icon path="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
-    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80&auto=format&fit=crop',
-    colSpan: 'md:col-span-1 lg:col-span-1',
-  },
-  {
     title: 'Company Formation',
     description: 'Legal entity setup assistance for international sellers to launch compliant Amazon operations.',
     icon: <Icon path="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />,
     image: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&auto=format&fit=crop',
     colSpan: 'md:col-span-2 lg:col-span-2',
+  },
+  {
+    title: 'Trademark Registration',
+    description: 'We guide you through the trademark registration process from filing to approval for complete Brand Registry eligibility.',
+    icon: <Icon path="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
+    image: 'https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&q=80&auto=format&fit=crop',
+    colSpan: 'md:col-span-1 lg:col-span-1',
   },
 ];
 
@@ -153,17 +153,18 @@ function TiltCard({ service, index }: { service: Service; index: number }) {
         <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/50 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
       </div>
 
-      {/* Card Content Header (Icon + Badge) */}
-      <div className="relative z-10 flex items-center justify-between mb-6">
-        <div className="flex h-11 w-11 sm:h-13 sm:w-13 items-center justify-center rounded-2xl bg-white/95 shadow-md backdrop-blur-md transition-transform duration-500 group-hover:scale-110 group-hover:-rotate-3">
-          {service.icon}
-        </div>
-        {isFeatured && (
+      {/* Top-Left Corner Icon Badge - fixed flush to corner */}
+      <div className="absolute top-0 left-0 z-20 flex h-12 w-12 sm:h-14 sm:w-14 items-center justify-center rounded-tl-[1.5rem] rounded-br-2xl bg-white/95 text-[#0052CC] shadow-md backdrop-blur-md border-r border-b border-white/60 transition-transform duration-500 group-hover:scale-105">
+        {service.icon}
+      </div>
+
+      {isFeatured && (
+        <div className="relative z-10 flex justify-end mb-6 ml-auto">
           <span className="rounded-full bg-white/90 border border-sky-200/60 px-3 py-1 text-[11px] sm:text-xs font-semibold text-sky-800 shadow-sm backdrop-blur-md">
             Core Expertise
           </span>
-        )}
-      </div>
+        </div>
+      )}
 
       {/* Card Text Area with clear contrast */}
       <div className="relative z-10 mt-auto rounded-2xl bg-white/60 p-4 backdrop-blur-sm border border-white/50 shadow-sm">
@@ -189,16 +190,16 @@ function TiltCard({ service, index }: { service: Service; index: number }) {
 
 export default function BentoServices() {
   return (
-    <section id="services" className="relative py-20 sm:py-28">
+    <section id="services" className="relative py-20 sm:py-28 overflow-hidden" style={{ background: 'linear-gradient(135deg, #FF5E00 30%, #FFAA00 70%)' }}>
       <div className="container-px mx-auto max-w-[1400px]">
         <div className="mb-10 sm:mb-14 max-w-3xl">
-          <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
+          <span className="inline-block text-xs font-bold uppercase tracking-widest text-white bg-white/20 px-3.5 py-1 rounded-full border border-white/30 shadow-sm backdrop-blur-md">
             Our Services
           </span>
           <TextReveal
             as="h2"
             text="A Complete Growth Partner, Not Just a Vendor"
-            className="mt-3 font-display text-3xl xs:text-4xl sm:text-5xl font-semibold text-navy text-pretty"
+            className="mt-4 font-display text-3xl xs:text-4xl sm:text-5xl font-bold text-white text-pretty"
           />
         </div>
 

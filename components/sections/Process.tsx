@@ -43,7 +43,7 @@ const STEPS = [
 
 export default function Process() {
   return (
-    <section id="process" className="relative py-16 sm:py-20 bg-transparent">
+    <section id="process" className="relative py-16 sm:py-20 bg-[#F4F7FC]" style={{ backgroundColor: '#F4F7FC' }}>
       <div className="container-px mx-auto max-w-6xl w-full">
         <div className="mb-10 sm:mb-12 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">

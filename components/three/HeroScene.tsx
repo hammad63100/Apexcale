@@ -28,7 +28,7 @@ function GlassShard({
     <mesh ref={mesh} position={position} scale={scale}>
       <icosahedronGeometry args={[1, 0]} />
       <meshPhysicalMaterial
-        color="#5EC8F0"
+        color="#0052CC"
         roughness={0.05}
         transmission={0.9}
         thickness={1.2}
@@ -79,9 +79,9 @@ function ParticleField({ count = 260 }: { count?: number }) {
       </bufferGeometry>
       <pointsMaterial
         size={0.035}
-        color="#0284C7"
+        color="#FF8C00"
         transparent
-        opacity={0.45}
+        opacity={0.55}
         sizeAttenuation
       />
     </points>

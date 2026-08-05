@@ -84,58 +84,58 @@ function CaseCard({ item, index }: { item: CaseStudy; index: number }) {
         },
       }}
       className={clsx(
-        'glass-strong glass-border-gradient group relative flex min-h-[280px] sm:min-h-[320px] flex-col justify-between overflow-hidden rounded-3xl p-5 sm:p-8',
-        'border border-white/80 shadow-glass transition-all duration-500 hover:shadow-glass-lg hover:border-sky-300/60',
+        'group relative flex min-h-[280px] sm:min-h-[340px] flex-col justify-between overflow-hidden rounded-3xl p-5 sm:p-8',
+        'bg-white border border-slate-200/90 shadow-md transition-all duration-500 hover:shadow-xl hover:border-[#0052CC]/40',
         item.span
       )}
     >
-      {/* Full-bleed background image reaching all borders */}
+      {/* Full-bleed background image with clear visibility */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
           src={item.image}
           alt={item.brand}
-          className="h-full w-full object-cover opacity-75 transition-all duration-700 group-hover:scale-105 group-hover:opacity-90"
+          className="h-full w-full object-cover opacity-80 transition-all duration-700 group-hover:scale-105 group-hover:opacity-95"
         />
-        {/* Soft subtle gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/50 to-transparent transition-opacity duration-500 group-hover:opacity-80" />
+        {/* Lighter gradient overlay to make images pop while ensuring text readability */}
+        <div className="absolute inset-0 bg-gradient-to-t from-white/95 via-white/40 to-transparent transition-opacity duration-500 group-hover:opacity-85" />
       </div>
 
-      {/* Category Pill Header */}
+      {/* Category Pill */}
       <div className="relative z-10 flex items-center justify-between mb-6">
-        <span className="rounded-full bg-white/90 border border-sky-200/60 px-3 py-1 text-[11px] sm:text-xs font-semibold text-sky-800 shadow-sm backdrop-blur-md">
+        <span className="rounded-full bg-white/95 border border-[#0052CC]/30 px-3.5 py-1 text-[11px] sm:text-xs font-bold text-[#0052CC] shadow-sm backdrop-blur-md">
           {item.category}
         </span>
       </div>
 
-      {/* Card Text Area with Glass Backdrop */}
-      <div className="relative z-10 mt-auto rounded-2xl bg-white/60 p-4 sm:p-5 backdrop-blur-sm border border-white/50 shadow-sm">
-        <h3 className="font-display text-xl sm:text-2xl font-bold text-navy leading-snug">
+      {/* Card Text Container with #FFAA00 background */}
+      <div className="relative z-10 mt-auto rounded-2xl p-4 sm:p-5 shadow-sm border border-amber-300/60" style={{ backgroundColor: '#FFAA00' }}>
+        <h3 className="font-display text-xl sm:text-2xl font-bold text-[#0A192F] leading-snug">
           {item.brand}
         </h3>
-        <p className="mt-2 text-xs sm:text-base leading-relaxed text-navy/85 text-left font-medium">
+        <p className="mt-2 text-xs sm:text-base leading-relaxed text-[#0A192F]/90 text-left font-medium">
           {item.description}
         </p>
       </div>
 
       {/* Hover ambient light glow */}
-      <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-sky-400/0 blur-2xl transition-colors duration-500 group-hover:bg-sky-400/20 z-0" />
+      <div className="pointer-events-none absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#0052CC]/0 blur-2xl transition-colors duration-500 group-hover:bg-[#0052CC]/15 z-0" />
     </motion.div>
   );
 }
 
 export default function Results() {
   return (
-    <section id="results" className="relative py-20 sm:py-28">
+    <section id="results" className="relative py-20 sm:py-28 bg-[#FFFFFF]" style={{ backgroundColor: '#FFFFFF' }}>
       <div className="container-px mx-auto max-w-[1400px]">
         <div className="mb-10 sm:mb-14 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-2xl">
-            <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
+            <span className="text-xs font-semibold uppercase tracking-widest text-[#FF8C00]">
               Results That Matter
             </span>
             <TextReveal
               as="h2"
               text="What Sets Our Performance Apart"
-              className="mt-3 font-display text-3xl xs:text-4xl sm:text-5xl font-semibold text-navy text-pretty"
+              className="mt-3 font-display text-3xl xs:text-4xl sm:text-5xl font-semibold text-[#0A192F] text-pretty"
             />
           </div>
         </div>

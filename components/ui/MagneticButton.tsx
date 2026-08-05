@@ -46,11 +46,11 @@ export default function MagneticButton({
       style={{ x, y }}
       whileTap={{ scale: 0.96 }}
       className={clsx(
-        'relative inline-flex items-center justify-center rounded-full px-8 py-4 font-semibold text-sm tracking-wide transition-shadow duration-300',
+        'relative inline-flex items-center justify-center rounded-full px-8 py-4 font-semibold text-sm tracking-wide transition-all duration-300',
         variant === 'filled' &&
-          'bg-cta-gradient text-white shadow-glow-sky hover:shadow-glow-orange',
+          'bg-cta-gradient text-white shadow-glow-orange hover:shadow-[0_0_50px_rgba(255,140,0,0.55)] hover:scale-[1.02]',
         variant === 'glass' &&
-          'glass text-navy hover:bg-white/60',
+          'glass text-navy hover:bg-accent/10 hover:border-accent/30 hover:text-accent-dark',
         className
       )}
     >

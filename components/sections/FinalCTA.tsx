@@ -1,55 +1,58 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import AuroraBackground from '@/components/ui/AuroraBackground';
 import MagneticButton from '@/components/ui/MagneticButton';
 import TextReveal from '@/components/ui/TextReveal';
 
 export default function FinalCTA() {
   return (
-    <section className="relative overflow-hidden py-20 sm:py-32">
-      <AuroraBackground intensity="strong" />
-
+    <section className="relative overflow-hidden py-20 sm:py-32 bg-cta-section-gradient" style={{ background: 'linear-gradient(135deg, #0052CC 0%, #0A192F 100%)' }}>
+      {/* Decorative floating elements */}
       <motion.div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-white/70 shadow-glass animate-float hidden sm:flex items-center justify-center p-2 border border-white/80"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-white/10 shadow-lg animate-float hidden sm:flex items-center justify-center p-2 border border-white/20"
         aria-hidden="true"
       >
         <img
-          src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+          src="/assets/logo.jpeg"
           alt="Apexcale Emblem"
           className="h-full w-full object-contain rounded-xl"
         />
       </motion.div>
       <motion.div
-        className="pointer-events-none absolute left-[20%] top-[30%] h-10 w-10 rounded-xl bg-white/50 shadow-glass animate-float hidden sm:flex items-center justify-center p-1.5 border border-white/80"
+        className="pointer-events-none absolute left-[20%] top-[30%] h-10 w-10 rounded-xl bg-white/8 shadow-lg animate-float hidden sm:flex items-center justify-center p-1.5 border border-white/15"
         style={{ animationDelay: '1.2s' }}
         aria-hidden="true"
       >
         <img
-          src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+          src="/assets/logo.jpeg"
           alt="Apexcale Emblem"
           className="h-full w-full object-contain rounded-lg"
         />
       </motion.div>
       <motion.div
-        className="pointer-events-none absolute right-[18%] bottom-[25%] h-14 w-14 rounded-2xl bg-white/50 shadow-glass animate-float hidden sm:flex items-center justify-center p-2 border border-white/80"
+        className="pointer-events-none absolute right-[18%] bottom-[25%] h-14 w-14 rounded-2xl bg-white/8 shadow-lg animate-float hidden sm:flex items-center justify-center p-2 border border-white/15"
         style={{ animationDelay: '2.4s' }}
         aria-hidden="true"
       >
         <img
-          src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+          src="/assets/logo.jpeg"
           alt="Apexcale Emblem"
           className="h-full w-full object-contain rounded-xl"
         />
       </motion.div>
 
+      {/* Subtle radial glow */}
+      <div className="pointer-events-none absolute inset-0 z-0" aria-hidden="true">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-accent/8 blur-[120px]" />
+      </div>
+
       <div className="container-px relative z-10 mx-auto max-w-3xl text-center">
         <TextReveal
           as="h2"
           text="Ready to Turn Your Amazon Store Into a Predictable Growth Engine?"
-          className="justify-center font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-semibold text-navy text-pretty"
+          className="justify-center font-display text-3xl xs:text-4xl sm:text-5xl lg:text-6xl font-semibold text-white text-pretty"
         />
-        <p className="mt-4 sm:mt-6 text-base sm:text-lg text-navy/65 leading-relaxed">
+        <p className="mt-4 sm:mt-6 text-base sm:text-lg text-white/70 leading-relaxed">
           Schedule a free strategy call with our team and get a clear, honest assessment of what's holding your account back — and exactly how Apexcale can fix it.
         </p>
         <div className="mt-8 sm:mt-10 flex justify-center w-full">

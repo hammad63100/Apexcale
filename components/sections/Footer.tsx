@@ -26,39 +26,40 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="relative mt-12 w-full">
-      <div className="w-full glass-strong rounded-t-3xl sm:rounded-t-[2.5rem] border-x-0 border-b-0 px-5 py-10 sm:px-14 sm:py-16">
+    <footer className="relative mt-12 w-full bg-[#0A192F]" style={{ backgroundColor: '#0A192F' }}>
+      <div className="w-full rounded-t-3xl sm:rounded-t-[2.5rem] border-t border-white/10 px-5 py-10 sm:px-14 sm:py-16 bg-[#0A192F]" style={{ backgroundColor: '#0A192F' }}>
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+            <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center gap-3">
                 <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-sm ring-1 ring-black/5">
                   <img
-                    src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+                    src="/assets/logo.jpeg"
                     alt="Apexcale Logo"
                     className="h-full w-full object-contain rounded-lg"
                   />
                 </div>
-                <span className="font-display text-xl font-bold text-navy tracking-tight">
-                  Apex<span className="text-sky-700">cale</span>
+                <span className="font-display text-xl font-bold text-white tracking-tight">
+                  Apex<span className="text-[#FF8C00]">cale</span>
                 </span>
               </div>
-              <p className="mt-4 max-w-xs text-sm text-navy/60">
+              <p className="mt-4 max-w-xs text-sm text-[#F4F7FC]/80 leading-relaxed">
                 Full-service Amazon growth partner for brands ready to scale profitably across global marketplaces.
               </p>
 
               <form
                 onSubmit={(e) => e.preventDefault()}
-                className="mt-6 flex flex-col xs:flex-row items-stretch xs:items-center gap-2 rounded-2xl xs:rounded-full bg-white/50 p-1.5"
+                className="mt-6 flex flex-col xs:flex-row items-stretch xs:items-center gap-2 rounded-2xl xs:rounded-full bg-white/10 p-1.5 border border-white/15"
               >
                 <input
                   type="email"
                   required
                   placeholder="Your work email"
-                  className="w-full bg-transparent px-4 py-2 text-sm text-navy placeholder:text-navy/40 focus:outline-none"
+                  className="w-full bg-transparent px-4 py-2 text-sm text-white placeholder:text-[#F4F7FC]/40 focus:outline-none"
                 />
                 <MagneticButton
                   variant="filled"
-                  className="!px-5 !py-2.5 !text-xs shrink-0 w-full xs:w-auto"
+                  className="!px-5 !py-2.5 !text-xs shrink-0 w-full xs:w-auto !bg-[#FF8C00] hover:!bg-[#FFA733] text-white"
                 >
                   Subscribe
                 </MagneticButton>
@@ -67,7 +68,7 @@ export default function Footer() {
 
             {COLUMNS.map((col) => (
               <div key={col.title}>
-                <h4 className="font-display text-sm font-semibold text-navy">
+                <h4 className="font-display text-sm font-semibold text-white">
                   {col.title}
                 </h4>
                 <ul className="mt-3 sm:mt-4 space-y-2.5 sm:space-y-3">
@@ -75,7 +76,7 @@ export default function Footer() {
                     <li key={link}>
                       <a
                         href="#"
-                        className="text-xs sm:text-sm text-navy/60 transition-colors hover:text-sky-700"
+                        className="text-xs sm:text-sm text-[#F4F7FC]/70 transition-colors hover:text-[#FF8C00]"
                         data-cursor="View"
                       >
                         {link}
@@ -87,8 +88,8 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="mt-10 sm:mt-12 flex flex-col items-center justify-between gap-4 sm:gap-6 border-t border-white/50 pt-6 sm:pt-8 sm:flex-row text-center sm:text-left">
-            <p className="text-xs text-navy/50">
+          <div className="mt-10 sm:mt-12 flex flex-col items-center justify-between gap-4 sm:gap-6 border-t border-white/10 pt-6 sm:pt-8 sm:flex-row text-center sm:text-left">
+            <p className="text-xs text-[#F4F7FC]/50">
               © {new Date().getFullYear()} Apexcale. All rights reserved.
             </p>
             <div className="flex gap-3">
@@ -98,7 +99,7 @@ export default function Footer() {
                   href="#"
                   whileHover={{ y: -4, scale: 1.1 }}
                   transition={{ type: 'spring', stiffness: 400, damping: 12 }}
-                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/60 text-navy"
+                  className="flex h-9 w-9 items-center justify-center rounded-full bg-white/10 text-[#F4F7FC] hover:bg-[#FF8C00] hover:text-white transition-colors"
                   aria-label={s.label}
                   data-cursor="Follow"
                 >

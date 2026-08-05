@@ -1,141 +1,135 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import TextReveal from '@/components/ui/TextReveal';
+
+const PROBLEMS = [
+  {
+    icon: (
+      <svg className="w-5 h-5 text-[#FF8C00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
+      </svg>
+    ),
+    title: 'Ad Spend Disappears',
+    description: 'Without a coordinated strategy across advertising, SEO, and operations, even great products get buried on page three while ad spend disappears.',
+    rotation: 'rotate-1 sm:translate-x-3',
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5 text-[#FF8C00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+      </svg>
+    ),
+    title: 'Misaligned Strategy',
+    description: 'Advertising isn\'t aligned with listing content, and listing content isn\'t aligned with how customers actually search on Amazon.',
+    rotation: '-rotate-1 sm:-translate-x-2',
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5 text-[#FF8C00]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+      </svg>
+    ),
+    title: 'No Unified Overview',
+    description: 'Nobody on the account is looking at the full picture, leaving advertising, SEO, and listing management completely uncoordinated.',
+    rotation: 'rotate-2 sm:translate-x-4',
+  },
+];
 
 export default function Problem() {
   return (
-    <section id="problem" className="relative py-28 overflow-hidden">
-      {/* Decorative background elements */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -left-32 top-20 h-72 w-72 rounded-full bg-red-200/20 blur-3xl" />
-        <div className="absolute -right-32 bottom-20 h-72 w-72 rounded-full bg-orange-200/20 blur-3xl" />
-      </div>
+    <section id="problem" className="relative py-20 sm:py-28 bg-[#FFFFFF]" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="container-px mx-auto max-w-6xl">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+          {/* Left Column - Headline & Main Paragraphs */}
+          <div className="lg:col-span-6 flex flex-col items-start text-left">
+            {/* Pill Badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 15 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              className="inline-flex items-center gap-2 rounded-full bg-slate-100 px-4 py-1.5 border border-slate-200/80 mb-6"
+            >
+              <span className="h-2 w-2 rounded-full bg-[#FF8C00]" />
+              <span className="text-xs font-semibold uppercase tracking-wider text-[#0A192F]">
+                The Problem
+              </span>
+            </motion.div>
 
-      <div className="container-px relative z-10 mx-auto max-w-6xl">
-        <div className="mb-10 sm:mb-14 max-w-2xl">
-          <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
-            The Problem
-          </span>
-          <TextReveal
-            as="h2"
-            text="Selling on Amazon Is Easy. Winning Is a Different Game Entirely."
-            className="mt-3 font-display text-3xl xs:text-4xl sm:text-5xl font-semibold text-navy text-pretty"
-          />
-        </div>
-
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 items-center">
-          {/* Left column - Text content */}
-          <div className="flex flex-col gap-5 sm:gap-6">
-            <motion.p
+            {/* Main Headline */}
+            <motion.h2
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
-              className="text-base leading-relaxed text-navy/70"
+              className="font-display text-3xl xs:text-4xl sm:text-5xl lg:text-5xl font-bold text-[#0A192F] leading-[1.15] tracking-tight"
             >
-              Every day, thousands of new listings go live on Amazon. Your competitors are
-              running ad campaigns, optimizing their content, and fighting for the exact same
-              customers you&apos;re trying to reach. Without a coordinated strategy across
-              advertising, SEO, and operations, even a great product can get buried on page
-              three — while your ad spend quietly disappears with nothing to show for it.
-            </motion.p>
+              Selling on Amazon Is Easy. Winning Is a Different Game Entirely.
+            </motion.h2>
 
+            {/* Paragraph 1 */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.15 }}
               viewport={{ once: true }}
-              className="text-base leading-relaxed text-navy/70"
+              className="mt-6 text-sm sm:text-base text-slate-600 font-normal leading-relaxed"
             >
-              Most brands don&apos;t have a visibility problem or a demand problem. They have
-              a <span className="font-semibold text-navy">strategy problem</span>. Their
-              advertising isn&apos;t aligned with their listing content. Their listing content
-              isn&apos;t aligned with how customers actually search. And nobody on the account
-              is looking at the full picture.
+              Every day, thousands of new listings go live on Amazon. Your competitors are running ad campaigns, optimizing their content, and fighting for the exact same customers you&apos;re trying to reach. Without a coordinated strategy across advertising, SEO, and operations, even a great product can get buried on page three — while your ad spend quietly disappears with nothing to show for it.
             </motion.p>
 
-            <motion.div
+            {/* Paragraph 2 */}
+            <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
               viewport={{ once: true }}
-              className="glass glass-border-gradient rounded-2xl p-5 sm:p-6 mt-1 sm:mt-2"
+              className="mt-4 text-sm sm:text-base text-slate-600 font-normal leading-relaxed"
             >
-              <p className="font-display text-base sm:text-lg font-medium leading-snug text-navy">
-                Apexcale was built to solve exactly that.
-              </p>
-              <p className="mt-2.5 sm:mt-3 text-xs sm:text-sm leading-relaxed text-navy/65">
-                We bring advertising, content, and operations under one roof, managed by a
-                single accountable team, so every part of your account is working toward the
-                same goal: <span className="font-semibold text-sky-700">profitable, sustainable growth</span>.
-              </p>
-            </motion.div>
+              Most brands don&apos;t have a visibility problem or a demand problem. They have a <span className="font-semibold text-[#0A192F]">strategy problem</span>. Their advertising isn&apos;t aligned with their listing content. Their listing content isn&apos;t aligned with how customers actually search. And nobody on the account is looking at the full picture.
+            </motion.p>
           </div>
 
-          {/* Right column - Visual illustration */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            viewport={{ once: true }}
-            className="relative flex items-center justify-center"
-          >
-            <div className="glass-strong rounded-3xl p-5 sm:p-8 w-full">
-              <div className="space-y-3 sm:space-y-4">
-                {/* Problem indicators */}
-                {[
-                  { label: 'Advertising', issue: 'Not aligned with listing content', color: 'bg-red-400/80' },
-                  { label: 'Listing Content', issue: 'Not matching customer search behavior', color: 'bg-orange-400/80' },
-                  { label: 'Account Operations', issue: 'No one watching the full picture', color: 'bg-amber-400/80' },
-                ].map((item, i) => (
-                  <motion.div
-                    key={item.label}
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.5, delay: 0.3 + i * 0.1 }}
-                    viewport={{ once: true }}
-                    className="flex items-center gap-3 sm:gap-4 rounded-xl bg-white/50 p-3.5 sm:p-4"
-                  >
-                    <div className={`h-3 w-3 shrink-0 rounded-full ${item.color}`} />
-                    <div>
-                      <div className="text-sm font-semibold text-navy">{item.label}</div>
-                      <div className="text-xs text-navy/55">{item.issue}</div>
-                    </div>
-                  </motion.div>
-                ))}
-
-                {/* Arrow down */}
-                <div className="flex justify-center py-1.5 sm:py-2">
-                  <motion.svg
-                    initial={{ opacity: 0 }}
-                    whileInView={{ opacity: 1 }}
-                    transition={{ delay: 0.7 }}
-                    viewport={{ once: true }}
-                    width="24" height="24" viewBox="0 0 24 24" fill="none" className="text-sky-600"
-                  >
-                    <path d="M12 5v14m0 0l-6-6m6 6l6-6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                  </motion.svg>
-                </div>
-
-                {/* Solution */}
-                <motion.div
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: 0.8 }}
-                  viewport={{ once: true }}
-                  className="flex items-center gap-3 sm:gap-4 rounded-xl bg-gradient-to-r from-sky-500/10 to-sky-400/10 p-3.5 sm:p-4 ring-1 ring-sky-300/40"
-                >
-                  <div className="h-3 w-3 shrink-0 rounded-full bg-sky-500" />
-                  <div>
-                    <div className="text-sm font-semibold text-navy">Apexcale&apos;s Unified Strategy</div>
-                    <div className="text-xs text-navy/55">Everything aligned under one accountable team</div>
+          {/* Right Column - Stacked Floating Cards */}
+          <div className="lg:col-span-6 flex flex-col gap-4 sm:gap-5 relative">
+            {PROBLEMS.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, x: 30, y: 10 }}
+                whileInView={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 0.6, delay: 0.15 * index }}
+                viewport={{ once: true }}
+                className={`bg-white rounded-2xl p-6 sm:p-7 border border-slate-200/80 shadow-lg shadow-slate-200/50 transform transition-transform duration-300 hover:scale-[1.02] hover:shadow-xl ${item.rotation}`}
+              >
+                <div className="flex items-start gap-4">
+                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-orange-50 border border-orange-100">
+                    {item.icon}
                   </div>
-                </motion.div>
-              </div>
-            </div>
-          </motion.div>
+                  <div>
+                    <h3 className="font-display text-lg sm:text-xl font-bold text-[#0A192F]">
+                      {item.title}
+                    </h3>
+                    <p className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                      {item.description}
+                    </p>
+                  </div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
+
+        {/* Full-Width Solution Box (Below Both Columns) */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+          viewport={{ once: true }}
+          className="mt-12 sm:mt-14 w-full rounded-2xl sm:rounded-3xl border-l-4 border-[#0052CC] bg-[#0052CC]/5 p-6 sm:p-8 border-y border-r border-slate-200/80 shadow-sm"
+        >
+          <p className="text-base sm:text-lg text-slate-700 leading-relaxed font-medium text-center max-w-4xl mx-auto">
+            <span className="font-bold text-[#0052CC]">Apexcale was built to solve exactly that.</span> We bring advertising, content, and operations under one roof, managed by a single accountable team, so every part of your account is working toward the same goal: <span className="font-semibold text-[#0052CC]">profitable, sustainable growth</span>.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

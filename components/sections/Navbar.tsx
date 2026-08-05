@@ -66,7 +66,7 @@ export default function Navbar() {
           <a href="#" className="flex items-center gap-2.5 shrink-0 group" data-cursor="Home">
             <div className="relative flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-sm ring-1 ring-black/5 transition-transform duration-300 group-hover:scale-105">
               <img
-                src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+                src="/assets/logo.jpeg"
                 alt="Apexcale Logo"
                 className="h-full w-full object-contain rounded-lg"
               />
@@ -117,7 +117,7 @@ export default function Navbar() {
             <div className="absolute top-6 left-6 flex items-center gap-2">
               <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white p-1 shadow-sm ring-1 ring-black/5">
                 <img
-                  src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+                  src="/assets/logo.jpeg"
                   alt="Apexcale Logo"
                   className="h-full w-full object-contain rounded-lg"
                 />
