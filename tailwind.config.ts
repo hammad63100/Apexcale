@@ -73,8 +73,8 @@ const config: Config = {
       },
       backgroundImage: {
         'sky-gradient': 'linear-gradient(180deg, #FFFFFF 0%, #F4F7FC 100%)',
-        'cta-gradient': 'linear-gradient(135deg, #FF8C00 0%, #FFA733 100%)',
-        'amazon-gradient': 'linear-gradient(135deg, #FF8C00 0%, #FFA733 100%)',
+        'cta-gradient': 'linear-gradient(135deg, #FF5E00 0%, #FFAA00 100%)',
+        'amazon-gradient': 'linear-gradient(135deg, #FF5E00 0%, #FFAA00 100%)',
         'brand-gradient': 'linear-gradient(135deg, #0052CC 0%, #0A192F 100%)',
         'hero-gradient': 'linear-gradient(180deg, #0A192F 0%, #0D2340 60%, #122A4A 100%)',
         'results-gradient': 'linear-gradient(180deg, #0A192F 0%, #0D2340 100%)',
