@@ -10,33 +10,33 @@ gsap.registerPlugin(ScrollTrigger);
 const STEPS = [
   {
     number: '01',
-    title: 'Account & Catalog Audit',
+    title: 'Discovery Call',
     description:
-      'We pull 90 days of PPC, listing, and account-health data to find exactly where ACOS, rank, and Buy Box share are leaking.',
+      'We start with a detailed conversation about your brand, your current performance, your goals, and the specific challenges holding your account back.',
   },
   {
     number: '02',
-    title: 'Keyword & Bid Architecture',
+    title: 'Account & Market Audit',
     description:
-      'Search-term harvesting builds a campaign structure segmented by intent, match type, and placement — built to isolate winners fast.',
+      'Our team conducts a comprehensive audit of your listings, advertising accounts, competitive landscape, and category-level data to identify exactly where the biggest opportunities — and risks — are hiding.',
   },
   {
     number: '03',
-    title: 'Listing & A+ Content Rebuild',
+    title: 'Custom Growth Strategy',
     description:
-      'Titles, bullets, backend terms, and A+ modules rewritten around indexed keywords and conversion-tested imagery.',
+      'Based on the audit, we build a tailored roadmap covering advertising, content, and account operations, aligned directly to your specific goals, budget, and marketplace footprint.',
   },
   {
     number: '04',
-    title: 'Launch & Scale',
+    title: 'Execution & Continuous Optimization',
     description:
-      'Daily bid management, dayparting, and budget reallocation toward the SKUs and placements converting at your target TACOS.',
+      'We implement the strategy in full and optimize continuously based on live performance data — adjusting bids, refining content, and refining targeting as real results come in.',
   },
   {
     number: '05',
-    title: 'Report & Reinvest',
+    title: 'Transparent Reporting & Strategic Review',
     description:
-      'Weekly dashboards tie ad spend directly to revenue and margin, so every dollar of reinvestment is a decision, not a guess.',
+      'You receive clear, regular reporting alongside strategic check-ins, so you always understand exactly how your investment is performing and what\'s coming next.',
   },
 ];
 
@@ -100,11 +100,11 @@ export default function Process() {
     >
       <div className="container-px mx-auto mb-14 max-w-6xl">
         <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
-          How we work
+          How We Work With You
         </span>
         <TextReveal
           as="h2"
-          text="A five-step system, run every week."
+          text="Our Process"
           className="mt-3 font-display text-4xl font-semibold text-navy sm:text-5xl"
         />
       </div>

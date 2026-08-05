@@ -21,35 +21,50 @@ function Icon({ path }: { path: string }) {
 
 const SERVICES: Service[] = [
   {
-    title: 'PPC Management',
+    title: 'Product Research & Validation',
     description:
-      'Sponsored Products, Brands, and Display campaigns engineered to drop ACOS while compounding TACOS-efficient scale.',
-    icon: <Icon path="M3 12h4l3 8 4-16 3 8h4" />,
+      'Before a single dollar goes into advertising or inventory, we identify what\'s actually worth selling. Our team analyzes demand trends, competition density, profit margins, and category saturation to validate product opportunities with real data — reducing guesswork and protecting your capital from day one.',
+    icon: <Icon path="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />,
   },
   {
-    title: 'Listing SEO',
-    description: 'Keyword-indexed titles, bullets, and backend terms that move organic rank.',
+    title: 'Trademark Registration',
+    description: 'A registered trademark isn\'t optional for serious Amazon sellers — it\'s the foundation of Brand Registry, brand protection, and long-term account security. We guide you through the trademark registration process from filing to approval, so your brand is legally protected and positioned to access Amazon\'s full suite of brand tools.',
+    icon: <Icon path="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />,
+  },
+  {
+    title: 'Company Formation',
+    description: 'For entrepreneurs and international sellers who need a properly structured business entity to sell compliantly, we assist with company formation — helping you set up the right legal and operational foundation to sell on Amazon and other marketplaces with confidence.',
+    icon: <Icon path="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />,
+  },
+  {
+    title: 'Amazon PPC & Advertising Management',
+    description: 'We plan, launch, and manage Sponsored Products, Sponsored Brands, and Sponsored Display campaigns built around real performance targets — not just impressions and clicks. Our team structures campaigns around keyword intent, competitive bidding strategy, and dayparting, with continuous optimization based on ACoS and TACoS rather than surface-level metrics.',
+    icon: <Icon path="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />,
+  },
+  {
+    title: 'Listing & SEO Optimization',
+    description: 'Our copywriters and keyword strategists rebuild your listings from the ground up — titles, bullet points, backend search terms, and descriptions — based on real search-volume data and buyer intent. We don\'t just make listings sound good; we make them convert, while ensuring they\'re fully optimized for Amazon\'s A9/A10 search algorithm.',
     icon: <Icon path="M11 4a7 7 0 105.3 12.1L21 21m-10-3a7 7 0 110-14 7 7 0 010 14z" />,
   },
   {
-    title: 'A+ Content & Brand Store',
-    description: 'Conversion-focused modules and a storefront that turns clicks into Buy Box wins.',
-    icon: <Icon path="M4 5h16v14H4zM4 9h16M9 9v10" />,
+    title: 'Full Account Management',
+    description: 'We handle the day-to-day operational demands of running an Amazon business: inventory monitoring, case log resolution, account health tracking, pricing oversight, and policy compliance. Our team acts as an extension of yours, catching issues before they become account-threatening problems.',
+    icon: <Icon path="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" />,
   },
   {
-    title: 'Account Health',
-    description: 'Proactive suppression fixes, policy monitoring, and Brand Registry management.',
-    icon: <Icon path="M12 3l7 4v5c0 5-3.5 8-7 9-3.5-1-7-4-7-9V7z" />,
+    title: 'Product Launch Strategy',
+    description: 'Launching a new product on Amazon requires more than flipping a listing live. We combine coordinated PPC activation, review-generation strategy, and early-stage ranking tactics to build sustainable velocity from day one — avoiding the common trap of a fast launch followed by a slow, permanent decline.',
+    icon: <Icon path="M13 10V3L4 14h7v7l9-11h-7z" />,
   },
   {
-    title: 'Amazon DSP Advertising',
-    description: 'Retarget shoppers on and off Amazon to lift repeat purchase rate.',
-    icon: <Icon path="M4 4h16v12H8l-4 4z" />,
+    title: 'A+ Content & Creative Design',
+    description: 'Our in-house design team produces premium product photography, lifestyle imagery, comparison charts, infographics, and A+/Premium A+ modules that are built specifically to increase conversion rate — not just look polished. Every creative asset is designed with a clear commercial purpose.',
+    icon: <Icon path="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />,
   },
   {
-    title: 'FBA & Inventory Consulting',
-    description: 'Reorder points, IPI health, and storage-fee strategy tuned to seasonality.',
-    icon: <Icon path="M3 7l9-4 9 4-9 4-9-4zm0 5l9 4 9-4m-18 5l9 4 9-4" />,
+    title: 'Brand Registry',
+    description: 'We support brands through Brand Registry enrollment and ongoing protection — identifying and resolving unauthorized sellers, counterfeit listings, and hijackers before they erode your Buy Box share, your pricing integrity, or your brand\'s reputation.',
+    icon: <Icon path="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />,
   },
 ];
 
@@ -121,11 +136,11 @@ export default function BentoServices() {
       <div className="container-px mx-auto max-w-6xl">
         <div className="mb-14 max-w-2xl">
           <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
-            What we run
+            Our Services
           </span>
           <TextReveal
             as="h2"
-            text="Every lever an Amazon P&L actually depends on."
+            text="A Complete Growth Partner, Not Just a Vendor"
             className="mt-3 font-display text-4xl font-semibold text-navy sm:text-5xl"
           />
         </div>

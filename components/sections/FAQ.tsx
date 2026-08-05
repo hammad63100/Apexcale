@@ -6,24 +6,28 @@ import TextReveal from '@/components/ui/TextReveal';
 
 const FAQS = [
   {
-    q: 'Do you require long-term contracts?',
-    a: 'No. Our standard agreement is month-to-month after an initial 90-day ramp period — the time it typically takes for PPC restructuring and listing changes to fully reflect in ACOS and organic rank.',
+    q: 'Which marketplaces do you work with?',
+    a: 'We manage accounts across Amazon (including the U.S., U.K., D.E., E.U., and other international marketplaces), Walmart Marketplace, and other major online retail platforms, allowing your brand to scale wherever your customers are located.',
   },
   {
-    q: 'Do you work with both Seller Central and Vendor Central?',
-    a: 'Yes. We manage PPC, listing optimization, and account health across both Seller Central (1P) and Vendor Central (3P) accounts, including hybrid catalogs.',
+    q: 'How quickly can I expect to see results?',
+    a: 'Advertising performance improvements are typically visible within the first 30 days. Organic ranking and listing optimization results generally build over a 60- to 90-day period, as Amazon\'s algorithm responds to sustained, consistent performance.',
   },
   {
-    q: 'How do you report on performance?',
-    a: 'You get a live dashboard tracking ACOS, TACOS, Buy Box percentage, and organic keyword rank, plus a written bi-weekly or weekly summary depending on your tier.',
+    q: 'Is there a minimum contract length?',
+    a: 'We operate on a results-first, flexible basis. Specific terms are discussed and agreed upon during your initial strategy call, based on your account size, marketplace footprint, and growth goals.',
   },
   {
-    q: 'Can you help with a suppressed listing or account health issue?',
-    a: 'Yes — account health remediation, including suppressed listings, policy violations, and Brand Registry issues, is included starting at the Scale tier and available as a standalone engagement.',
+    q: 'Do you charge a commission on advertising spend?',
+    a: 'Our pricing structure is discussed transparently during onboarding, based on the scope of services required. We do not believe in hidden fees or unclear billing practices.',
   },
   {
-    q: 'What is the minimum ad spend you work with?',
-    a: 'We typically take on accounts spending at least $3,000/month on Amazon Ads, though the Launch tier is built for brands ramping up from a smaller base.',
+    q: 'What makes Apexcale different from other Amazon agencies?',
+    a: 'We integrate advertising, content, operations, and brand protection into a single, coordinated strategy — managed by a dedicated team that both plans and executes the work, rather than handing recommendations off to a separate implementation team.',
+  },
+  {
+    q: 'Can you support brands that are just launching on Amazon, as well as established brands?',
+    a: 'Yes. We work with early-stage brands preparing for launch as well as established sellers looking to scale, recover from stalled growth, or expand into new marketplaces.',
   },
 ];
 
@@ -80,11 +84,11 @@ export default function FAQ() {
       <div className="container-px mx-auto max-w-3xl">
         <div className="mb-12 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
-            Questions
+            Frequently Asked Questions
           </span>
           <TextReveal
             as="h2"
-            text="Everything before you book a call."
+            text="Questions"
             className="mt-3 justify-center font-display text-4xl font-semibold text-navy sm:text-5xl"
           />
         </div>

@@ -6,15 +6,15 @@ import MagneticButton from '@/components/ui/MagneticButton';
 const COLUMNS = [
   {
     title: 'Services',
-    links: ['PPC Management', 'Listing SEO', 'A+ Content', 'Brand Store Design', 'FBA Consulting'],
+    links: ['Product Research', 'Trademark Registration', 'Company Formation', 'PPC Management', 'Listing SEO'],
   },
   {
     title: 'Company',
-    links: ['About', 'Case Studies', 'Careers', 'Contact'],
+    links: ['About Apexcale', 'Case Studies', 'Careers', 'Contact'],
   },
   {
     title: 'Resources',
-    links: ['Amazon PPC Guide', 'ACOS Calculator', 'Blog', 'Help Center'],
+    links: ['Amazon Guide', 'ACOS Calculator', 'Blog', 'Help Center'],
   },
 ];
 
@@ -36,12 +36,11 @@ export default function Footer() {
                   A
                 </span>
                 <span className="font-display text-lg font-semibold text-navy">
-                  Ascent<span className="text-sky-700">Commerce</span>
+                  Apex<span className="text-sky-700">cale</span>
                 </span>
               </div>
               <p className="mt-4 max-w-xs text-sm text-navy/60">
-                Full-service Amazon PPC, SEO, and catalog management for
-                brands ready to scale profitably.
+                Full-service Amazon growth partner for brands ready to scale profitably across global marketplaces.
               </p>
 
               <form
@@ -87,7 +86,7 @@ export default function Footer() {
 
           <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/50 pt-8 sm:flex-row">
             <p className="text-xs text-navy/50">
-              © {new Date().getFullYear()} AscentCommerce. All rights reserved.
+              © {new Date().getFullYear()} Apexcale. All rights reserved.
             </p>
             <div className="flex gap-3">
               {SOCIALS.map((s) => (

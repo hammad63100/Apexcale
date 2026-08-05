@@ -7,33 +7,15 @@ import TextReveal from '@/components/ui/TextReveal';
 const QUOTES = [
   {
     quote:
-      'Our ACOS dropped from 38% to 21% in the first quarter while revenue kept climbing. They actually understand the bid math.',
-    name: 'Dana Whitfield',
-    role: 'Founder, Northline Outdoor',
+      'Apexcale took over our Amazon account and within a few months, our visibility and sales completely turned around. Their team clearly knows what they\'re doing.',
+    name: 'Simon',
+    role: 'Supplements Category',
   },
   {
     quote:
-      'The A+ Content rebuild alone lifted our conversion rate almost 30%. The brand store finally looks like the brand.',
-    name: 'Marcus Lee',
-    role: 'CEO, Kessler Home Goods',
-  },
-  {
-    quote:
-      'First agency that reports on TACOS instead of just clicks. We know exactly what every ad dollar is doing to margin.',
-    name: 'Priya Anand',
-    role: 'VP Growth, Verdant Supplement Co.',
-  },
-  {
-    quote:
-      'Account health went from constant suppressions to zero policy flags in two months. Total peace of mind.',
-    name: 'Sam Okafor',
-    role: 'Operations Lead, Alderwood Pet Supply',
-  },
-  {
-    quote:
-      'They rebuilt our catalog structure before Prime Day and we hit record Buy Box share the entire week.',
-    name: 'Elena Cruz',
-    role: 'Brand Manager, Fernway Goods',
+      'What sets Apexcale apart is that they treat our account like it\'s their own business. Communication has been excellent, and the results speak for themselves.',
+    name: 'Sunny',
+    role: 'Fashion Category',
   },
 ];
 
@@ -87,11 +69,11 @@ export default function Testimonials() {
     <section className="relative overflow-hidden py-28">
       <div className="container-px mx-auto mb-14 max-w-6xl">
         <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
-          What sellers say
+          Client Testimonials
         </span>
         <TextReveal
           as="h2"
-          text="Brand teams that trust us with their ad budget."
+          text="What Our Clients Say"
           className="mt-3 font-display text-4xl font-semibold text-navy sm:text-5xl"
         />
       </div>
