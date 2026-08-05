@@ -1,12 +1,15 @@
 {
-  "name": "amazon-growth-agency",
+  "name": "Apexcale",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "export-nojekyll": "node -e \"require('fs').writeFileSync('out/.nojekyll', '')\"",
+    "predeploy": "npm run build && npm run export-nojekyll",
+    "deploy": "gh-pages -d out -b gh-pages --dotfiles"
   },
   "dependencies": {
     "next": "14.2.5",
@@ -22,6 +25,7 @@
     "clsx": "^2.1.1"
   },
   "devDependencies": {
+    "gh-pages": "^6.1.1",
     "typescript": "^5.5.4",
     "@types/node": "^20.14.14",
     "@types/react": "^18.3.3",

@@ -1,4 +1,4 @@
-# Apexcale — Amazon Growth Agency
+# Apexcale 
 
 A premium, modern marketing application for **Apexcale**, a full-service Amazon growth agency helping brands scale profitably across global marketplaces.
 
@@ -30,9 +30,15 @@ npm run build
 
 ## 🌐 GitHub Pages Deployment
 
-This project uses **GitHub Actions** (`.github/workflows/deploy.yml`) for automated deployment to GitHub Pages.
+To deploy directly to GitHub Pages via `gh-pages`:
 
-Pushing changes to the `main` branch automatically triggers the build and live deployment:
+```bash
+npm run deploy
+```
+
+This command automatically builds the static site (`npm run build`), creates the `.nojekyll` file, and pushes the `out` directory to the `gh-pages` branch on GitHub.
+
+To push source code changes to `main`:
 
 ```bash
 git add .

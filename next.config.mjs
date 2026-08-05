@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
-// Trigger GitHub Actions build with new Pages settings
-const isGithubPages = process.env.GITHUB_PAGES === 'true';
-const repoName = 'AscentCommerce-Amazon-Growth-Agency';
+const isProd = process.env.NODE_ENV === 'production' || process.env.GITHUB_PAGES === 'true';
+const repoName = 'Apexcale';
 
 const nextConfig = {
   reactStrictMode: true,
@@ -13,7 +12,7 @@ const nextConfig = {
       { protocol: 'https', hostname: 'images.unsplash.com' },
     ],
   },
-  ...(isGithubPages
+  ...(isProd
     ? {
         basePath: `/${repoName}`,
         assetPrefix: `/${repoName}/`,
