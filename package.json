@@ -9,7 +9,7 @@
     "lint": "next lint",
     "export-nojekyll": "node -e \"require('fs').writeFileSync('out/.nojekyll', '')\"",
     "predeploy": "npm run build && npm run export-nojekyll",
-    "deploy": "gh-pages -d out -b gh-pages --dotfiles"
+    "deploy": "npx gh-pages -d out -b gh-pages --dotfiles"
   },
   "dependencies": {
     "next": "14.2.5",
