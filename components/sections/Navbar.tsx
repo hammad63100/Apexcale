@@ -6,10 +6,10 @@ import MagneticButton from '@/components/ui/MagneticButton';
 import clsx from 'clsx';
 
 const LINKS = [
+  { label: 'Problem', href: '#problem' },
   { label: 'Services', href: '#services' },
   { label: 'Process', href: '#process' },
   { label: 'Results', href: '#results' },
-  { label: 'Pricing', href: '#pricing' },
   { label: 'FAQ', href: '#faq' },
 ];
 
@@ -55,19 +55,19 @@ export default function Navbar() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-4 left-1/2 z-50 w-[94%] max-w-6xl -translate-x-1/2"
+        className="fixed top-3 sm:top-4 left-1/2 z-50 w-[92%] sm:w-[94%] max-w-6xl -translate-x-1/2"
       >
         <div
           className={clsx(
             'glass flex items-center justify-between rounded-full transition-all duration-500',
-            scrolled ? 'px-5 py-2.5' : 'px-7 py-4'
+            scrolled ? 'px-4 py-2 sm:px-5 sm:py-2.5' : 'px-4 py-3 sm:px-7 sm:py-4'
           )}
         >
-          <a href="#" className="flex items-center gap-2" data-cursor="Home">
+          <a href="#" className="flex items-center gap-2 shrink-0" data-cursor="Home">
             <span className="flex h-8 w-8 items-center justify-center rounded-full bg-cta-gradient text-white font-display font-bold text-sm">
               A
             </span>
-            <span className="font-display font-semibold text-navy text-lg">
+            <span className="font-display font-semibold text-navy text-base sm:text-lg">
               Apex<span className="text-sky-700">cale</span>
             </span>
           </a>
@@ -89,13 +89,13 @@ export default function Navbar() {
           </div>
 
           <button
-            className="flex h-10 w-10 items-center justify-center rounded-full lg:hidden"
+            className="flex h-9 w-9 items-center justify-center rounded-full lg:hidden hover:bg-white/40 active:scale-95 transition-transform"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
             <div className="space-y-1.5">
-              <span className="block h-0.5 w-6 bg-navy" />
-              <span className="block h-0.5 w-6 bg-navy" />
+              <span className="block h-0.5 w-5 bg-navy" />
+              <span className="block h-0.5 w-5 bg-navy" />
             </div>
           </button>
         </div>
@@ -107,10 +107,10 @@ export default function Navbar() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="glass-strong fixed inset-0 z-[60] flex flex-col items-center justify-center gap-8 lg:hidden"
+            className="glass-strong fixed inset-0 z-[60] flex flex-col items-center justify-center gap-6 sm:gap-8 lg:hidden px-6"
           >
             <button
-              className="absolute top-6 right-6 text-navy text-3xl"
+              className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-full bg-white/60 text-navy text-2xl"
               onClick={() => setOpen(false)}
               aria-label="Close menu"
             >
@@ -127,9 +127,13 @@ export default function Navbar() {
                   e.preventDefault();
                   setOpen(false);
                   const target = document.querySelector(l.href);
-                  target?.scrollIntoView({ behavior: 'smooth' });
+                  if (target) {
+                    (window as any).lenis
+                      ? (window as any).lenis.scrollTo(target, { offset: -80 })
+                      : target.scrollIntoView({ behavior: 'smooth' });
+                  }
                 }}
-                className="font-display text-3xl font-semibold text-navy"
+                className="font-display text-2xl sm:text-3xl font-semibold text-navy hover:text-sky-700 transition-colors"
               >
                 {l.label}
               </motion.a>
@@ -138,8 +142,9 @@ export default function Navbar() {
               initial={{ y: 30, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
+              className="mt-4"
             >
-              <MagneticButton variant="filled">Book a Free Audit</MagneticButton>
+              <MagneticButton variant="filled" className="!px-8 !py-4 !text-sm">Book a Free Audit</MagneticButton>
             </motion.div>
           </motion.div>
         )}

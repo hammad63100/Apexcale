@@ -6,15 +6,15 @@ import MagneticButton from '@/components/ui/MagneticButton';
 const COLUMNS = [
   {
     title: 'Services',
-    links: ['Product Research', 'Trademark Registration', 'Company Formation', 'PPC Management', 'Listing SEO'],
+    links: ['Product Research', 'Trademark Registration', 'Company Formation', 'PPC Management', 'Listing SEO', 'A+ Content & Design'],
   },
   {
     title: 'Company',
-    links: ['About Apexcale', 'Case Studies', 'Careers', 'Contact'],
+    links: ['About Apexcale', 'Our Process', 'Why Choose Us', 'Contact'],
   },
   {
     title: 'Resources',
-    links: ['Amazon Guide', 'ACOS Calculator', 'Blog', 'Help Center'],
+    links: ['Amazon Guide', 'FAQ', 'Blog', 'Help Center'],
   },
 ];
 
@@ -26,11 +26,11 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="relative pb-8 pt-4">
-      <div className="container-px mx-auto max-w-6xl">
-        <div className="glass-strong rounded-[2rem] p-10 sm:p-14">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-            <div>
+    <footer className="relative mt-12 w-full">
+      <div className="w-full glass-strong rounded-t-3xl sm:rounded-t-[2.5rem] border-x-0 border-b-0 px-5 py-10 sm:px-14 sm:py-16">
+        <div className="mx-auto max-w-6xl">
+          <div className="grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
+            <div className="sm:col-span-2 lg:col-span-1">
               <div className="flex items-center gap-2">
                 <span className="flex h-8 w-8 items-center justify-center rounded-full bg-cta-gradient font-display text-sm font-bold text-white">
                   A
@@ -45,7 +45,7 @@ export default function Footer() {
 
               <form
                 onSubmit={(e) => e.preventDefault()}
-                className="mt-6 flex items-center gap-2 rounded-full bg-white/50 p-1.5"
+                className="mt-6 flex flex-col xs:flex-row items-stretch xs:items-center gap-2 rounded-2xl xs:rounded-full bg-white/50 p-1.5"
               >
                 <input
                   type="email"
@@ -55,7 +55,7 @@ export default function Footer() {
                 />
                 <MagneticButton
                   variant="filled"
-                  className="!px-5 !py-2.5 !text-xs shrink-0"
+                  className="!px-5 !py-2.5 !text-xs shrink-0 w-full xs:w-auto"
                 >
                   Subscribe
                 </MagneticButton>
@@ -67,12 +67,12 @@ export default function Footer() {
                 <h4 className="font-display text-sm font-semibold text-navy">
                   {col.title}
                 </h4>
-                <ul className="mt-4 space-y-3">
+                <ul className="mt-3 sm:mt-4 space-y-2.5 sm:space-y-3">
                   {col.links.map((link) => (
                     <li key={link}>
                       <a
                         href="#"
-                        className="text-sm text-navy/60 transition-colors hover:text-sky-700"
+                        className="text-xs sm:text-sm text-navy/60 transition-colors hover:text-sky-700"
                         data-cursor="View"
                       >
                         {link}
@@ -84,7 +84,7 @@ export default function Footer() {
             ))}
           </div>
 
-          <div className="mt-12 flex flex-col items-center justify-between gap-6 border-t border-white/50 pt-8 sm:flex-row">
+          <div className="mt-10 sm:mt-12 flex flex-col items-center justify-between gap-4 sm:gap-6 border-t border-white/50 pt-6 sm:pt-8 sm:flex-row text-center sm:text-left">
             <p className="text-xs text-navy/50">
               © {new Date().getFullYear()} Apexcale. All rights reserved.
             </p>

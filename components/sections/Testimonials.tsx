@@ -10,12 +10,14 @@ const QUOTES = [
       'Apexcale took over our Amazon account and within a few months, our visibility and sales completely turned around. Their team clearly knows what they\'re doing.',
     name: 'Simon',
     role: 'Supplements Category',
+    image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&q=80&auto=format&fit=crop&crop=face',
   },
   {
     quote:
       'What sets Apexcale apart is that they treat our account like it\'s their own business. Communication has been excellent, and the results speak for themselves.',
     name: 'Sunny',
     role: 'Fashion Category',
+    image: 'https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=100&q=80&auto=format&fit=crop&crop=face',
   },
 ];
 
@@ -43,18 +45,22 @@ function Stars() {
 
 function TestimonialCard({ q }: { q: (typeof QUOTES)[number] }) {
   return (
-    <div className="glass mx-3 w-[340px] shrink-0 rounded-3xl p-7 sm:w-[400px]" data-cursor="Read">
+    <div className="glass mx-2 sm:mx-3 w-[280px] xs:w-[340px] sm:w-[400px] shrink-0 rounded-3xl p-5 sm:p-7" data-cursor="Read">
       <Stars />
-      <p className="mt-5 text-[15px] leading-relaxed text-navy/80">
-        “{q.quote}”
+      <p className="mt-4 sm:mt-5 text-xs sm:text-[15px] leading-relaxed text-navy/80">
+        &ldquo;{q.quote}&rdquo;
       </p>
-      <div className="mt-6 flex items-center gap-3">
-        <div className="flex h-10 w-10 items-center justify-center rounded-full bg-cta-gradient font-display text-sm font-semibold text-white">
-          {q.name.split(' ').map((n) => n[0]).join('')}
+      <div className="mt-5 sm:mt-6 flex items-center gap-3">
+        <div className="h-9 w-9 sm:h-10 sm:w-10 overflow-hidden rounded-full shrink-0">
+          <img
+            src={q.image}
+            alt={q.name}
+            className="h-full w-full object-cover"
+          />
         </div>
         <div>
-          <div className="text-sm font-semibold text-navy">{q.name}</div>
-          <div className="text-xs text-navy/55">{q.role}</div>
+          <div className="text-xs sm:text-sm font-semibold text-navy">{q.name}</div>
+          <div className="text-[11px] sm:text-xs text-navy/55">{q.role}</div>
         </div>
       </div>
     </div>
@@ -66,15 +72,15 @@ export default function Testimonials() {
   const doubled = [...QUOTES, ...QUOTES];
 
   return (
-    <section className="relative overflow-hidden py-28">
-      <div className="container-px mx-auto mb-14 max-w-6xl">
+    <section className="relative overflow-hidden py-20 sm:py-28">
+      <div className="container-px mx-auto mb-10 sm:mb-14 max-w-6xl">
         <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
           Client Testimonials
         </span>
         <TextReveal
           as="h2"
           text="What Our Clients Say"
-          className="mt-3 font-display text-4xl font-semibold text-navy sm:text-5xl"
+          className="mt-3 font-display text-3xl xs:text-4xl sm:text-5xl font-semibold text-navy text-pretty"
         />
       </div>
 

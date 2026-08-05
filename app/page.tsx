@@ -1,10 +1,10 @@
 import Navbar from '@/components/sections/Navbar';
 import Hero from '@/components/sections/Hero';
+import Problem from '@/components/sections/Problem';
 import BentoServices from '@/components/sections/BentoServices';
 import Process from '@/components/sections/Process';
 import Results from '@/components/sections/Results';
 import Testimonials from '@/components/sections/Testimonials';
-import Pricing from '@/components/sections/Pricing';
 import WhyChooseUs from '@/components/sections/WhyChooseUs';
 import FAQ from '@/components/sections/FAQ';
 import FinalCTA from '@/components/sections/FinalCTA';
@@ -15,12 +15,12 @@ export default function Home() {
     <main className="relative">
       <Navbar />
       <Hero />
+      <Problem />
       <BentoServices />
+      <WhyChooseUs />
       <Process />
       <Results />
       <Testimonials />
-      <Pricing />
-      <WhyChooseUs />
       <FAQ />
       <FinalCTA />
       <Footer />

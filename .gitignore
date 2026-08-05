@@ -1,1 +1,29 @@
-Nothing needs to be added to .gitignore since the changes only include TypeScript/JSX source files (.tsx) which are not build artifacts, dependencies, or temporary files.
+# dependencies
+/node_modules
+/.pnpm
+/.yarn
+
+# next.js build output
+/.next/
+/out/
+/build
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# local env files
+.env*.local
+.env
+
+# vercel & IDEs
+.vercel
+.idea
+.vscode
+*.suo
+*.sw?
+
+# OS metadata
+.DS_Store
+Thumbs.db

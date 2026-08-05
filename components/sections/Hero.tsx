@@ -6,17 +6,10 @@ import { useEffect } from 'react';
 import AuroraBackground from '@/components/ui/AuroraBackground';
 import TextReveal from '@/components/ui/TextReveal';
 import MagneticButton from '@/components/ui/MagneticButton';
-import Counter from '@/components/ui/Counter';
 
 const HeroScene = dynamic(() => import('@/components/three/HeroScene'), {
   ssr: false,
 });
-
-const TRUST = [
-  { value: 500, suffix: '+', label: 'Brands Scaled' },
-  { value: 50, prefix: '$', suffix: 'M+', label: 'Ad Spend Managed' },
-  { value: 34, suffix: '%', label: 'Avg. ACOS Reduction' },
-];
 
 export default function Hero() {
   const spotX = useMotionValue(0);
@@ -39,32 +32,22 @@ export default function Hero() {
   }, [spotX, spotY]);
 
   return (
-    <section className="relative min-h-screen overflow-hidden pt-40 pb-24">
+    <section className="relative min-h-[90vh] sm:min-h-screen overflow-hidden pt-32 sm:pt-40 pb-16 sm:pb-24 flex flex-col justify-center">
       <AuroraBackground />
       <motion.div
         className="pointer-events-none absolute inset-0 z-[1]"
         style={{ background }}
       />
 
-      <div className="absolute inset-0 z-[2] h-full w-full opacity-90">
+      <div className="absolute inset-0 z-[2] h-full w-full opacity-90 pointer-events-none md:pointer-events-auto">
         <HeroScene />
       </div>
 
-      <div className="container-px relative z-10 mx-auto max-w-6xl">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="glass mb-8 inline-flex items-center gap-2 rounded-full px-4 py-2 text-xs font-medium text-sky-800"
-        >
-          <span className="h-2 w-2 rounded-full bg-amazon animate-pulse" />
-          Amazon Advertising Verified Partner
-        </motion.div>
-
+      <div className="container-px relative z-10 mx-auto flex max-w-6xl flex-col items-center text-center">
         <TextReveal
           as="h1"
           text="Scale Your Brand to the Top of Amazon — Anywhere in the World"
-          className="max-w-4xl font-display text-5xl font-semibold text-navy text-balance sm:text-6xl lg:text-7xl"
+          className="mx-auto max-w-4xl font-display text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-navy text-pretty"
           triggerOnView={false}
         />
 
@@ -72,7 +55,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-8 max-w-xl text-lg text-navy/70"
+          className="mx-auto mt-4 sm:mt-8 max-w-2xl text-base sm:text-lg text-navy/70 leading-relaxed"
         >
           Apexcale is a full-service Amazon growth partner for brands that are serious about scaling profitably. We combine data-driven advertising, conversion-focused listing optimization, and hands-on account management to help you win the Buy Box, dominate search results, and turn your marketplace presence into a predictable revenue engine — across Amazon, Walmart, and every major global marketplace.
         </motion.p>
@@ -81,32 +64,14 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.7 }}
-          className="mt-10 flex flex-wrap items-center gap-4"
+          className="mt-8 sm:mt-10 flex flex-col xs:flex-row items-center justify-center gap-3 sm:gap-4 w-full xs:w-auto"
         >
-          <MagneticButton variant="filled" cursorLabel="Start">
+          <MagneticButton variant="filled" cursorLabel="Start" className="w-full xs:w-auto !px-6 !py-3.5 !text-sm">
             Schedule a Free Strategy Call
           </MagneticButton>
-          <MagneticButton variant="glass" cursorLabel="View">
+          <MagneticButton variant="glass" cursorLabel="View" className="w-full xs:w-auto !px-6 !py-3.5 !text-sm">
             View Our Results ↓
           </MagneticButton>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 1 }}
-          className="glass mt-20 grid max-w-2xl grid-cols-3 divide-x divide-white/50 rounded-2xl px-6 py-6"
-        >
-          {TRUST.map((t) => (
-            <div key={t.label} className="px-2 text-center sm:px-4">
-              <div className="font-display text-2xl font-bold text-navy sm:text-3xl">
-                <Counter value={t.value} prefix={t.prefix} suffix={t.suffix} />
-              </div>
-              <div className="mt-1 text-[11px] font-medium uppercase tracking-wide text-navy/60 sm:text-xs">
-                {t.label}
-              </div>
-            </div>
-          ))}
         </motion.div>
       </div>
     </section>

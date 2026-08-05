@@ -44,16 +44,16 @@ function AccordionItem({
     <div className="glass overflow-hidden rounded-2xl">
       <button
         onClick={onClick}
-        className="flex w-full items-center justify-between px-6 py-5 text-left"
+        className="flex w-full items-center justify-between px-4 py-4 sm:px-6 sm:py-5 text-left gap-3"
         data-cursor="Toggle"
       >
-        <span className="font-display text-base font-semibold text-navy sm:text-lg">
+        <span className="font-display text-sm xs:text-base sm:text-lg font-semibold text-navy">
           {item.q}
         </span>
         <motion.span
           animate={{ rotate: isOpen ? 45 : 0 }}
           transition={{ duration: 0.3 }}
-          className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white/60 text-navy text-xl"
+          className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-full bg-white/60 text-navy text-lg sm:text-xl font-bold"
         >
           +
         </motion.span>
@@ -66,9 +66,9 @@ function AccordionItem({
             animate={{ height: 'auto', opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
-            className="px-6"
+            className="px-4 sm:px-6"
           >
-            <p className="pb-6 text-sm leading-relaxed text-navy/65">{item.a}</p>
+            <p className="pb-4 sm:pb-6 text-xs sm:text-sm leading-relaxed text-navy/65">{item.a}</p>
           </motion.div>
         )}
       </AnimatePresence>
@@ -80,20 +80,20 @@ export default function FAQ() {
   const [open, setOpen] = useState<number | null>(0);
 
   return (
-    <section id="faq" className="relative py-28">
+    <section id="faq" className="relative py-20 sm:py-28">
       <div className="container-px mx-auto max-w-3xl">
-        <div className="mb-12 text-center">
+        <div className="mb-10 sm:mb-12 text-center">
           <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
             Frequently Asked Questions
           </span>
           <TextReveal
             as="h2"
             text="Questions"
-            className="mt-3 justify-center font-display text-4xl font-semibold text-navy sm:text-5xl"
+            className="mt-3 justify-center font-display text-3xl xs:text-4xl sm:text-5xl font-semibold text-navy text-pretty"
           />
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 sm:space-y-4">
           {FAQS.map((item, i) => (
             <AccordionItem
               key={item.q}
