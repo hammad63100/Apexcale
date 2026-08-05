@@ -63,11 +63,15 @@ export default function Navbar() {
             scrolled ? 'px-4 py-2 sm:px-5 sm:py-2.5' : 'px-4 py-3 sm:px-7 sm:py-4'
           )}
         >
-          <a href="#" className="flex items-center gap-2 shrink-0" data-cursor="Home">
-            <span className="flex h-8 w-8 items-center justify-center rounded-full bg-cta-gradient text-white font-display font-bold text-sm">
-              A
-            </span>
-            <span className="font-display font-semibold text-navy text-base sm:text-lg">
+          <a href="#" className="flex items-center gap-2.5 shrink-0 group" data-cursor="Home">
+            <div className="relative flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-sm ring-1 ring-black/5 transition-transform duration-300 group-hover:scale-105">
+              <img
+                src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+                alt="Apexcale Logo"
+                className="h-full w-full object-contain rounded-lg"
+              />
+            </div>
+            <span className="font-display font-semibold text-navy text-base sm:text-lg tracking-tight">
               Apex<span className="text-sky-700">cale</span>
             </span>
           </a>
@@ -110,6 +114,18 @@ export default function Navbar() {
             exit={{ opacity: 0 }}
             className="glass-strong fixed inset-0 z-[60] flex flex-col items-center justify-center gap-6 sm:gap-8 lg:hidden px-6"
           >
+            <div className="absolute top-6 left-6 flex items-center gap-2">
+              <div className="flex h-9 w-9 items-center justify-center rounded-xl bg-white p-1 shadow-sm ring-1 ring-black/5">
+                <img
+                  src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+                  alt="Apexcale Logo"
+                  className="h-full w-full object-contain rounded-lg"
+                />
+              </div>
+              <span className="font-display font-semibold text-navy text-lg">
+                Apex<span className="text-sky-700">cale</span>
+              </span>
+            </div>
             <button
               className="absolute top-6 right-6 flex h-10 w-10 items-center justify-center rounded-full bg-white/60 text-navy text-2xl"
               onClick={() => setOpen(false)}

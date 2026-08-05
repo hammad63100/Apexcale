@@ -30,12 +30,15 @@ export default function Footer() {
       <div className="w-full glass-strong rounded-t-3xl sm:rounded-t-[2.5rem] border-x-0 border-b-0 px-5 py-10 sm:px-14 sm:py-16">
         <div className="mx-auto max-w-6xl">
           <div className="grid grid-cols-1 gap-8 sm:gap-12 sm:grid-cols-2 lg:grid-cols-[1.4fr_1fr_1fr_1fr]">
-            <div className="sm:col-span-2 lg:col-span-1">
-              <div className="flex items-center gap-2">
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-cta-gradient font-display text-sm font-bold text-white">
-                  A
-                </span>
-                <span className="font-display text-lg font-semibold text-navy">
+              <div className="flex items-center gap-3">
+                <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-sm ring-1 ring-black/5">
+                  <img
+                    src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+                    alt="Apexcale Logo"
+                    className="h-full w-full object-contain rounded-lg"
+                  />
+                </div>
+                <span className="font-display text-xl font-bold text-navy tracking-tight">
                   Apex<span className="text-sky-700">cale</span>
                 </span>
               </div>

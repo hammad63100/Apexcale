@@ -16,6 +16,8 @@ const body = Inter({
   display: 'swap',
 });
 
+const LOGO_PATH = '/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg';
+
 export const metadata: Metadata = {
   title: 'Apexcale — Scale Your Brand to the Top of Amazon',
   description:
@@ -30,6 +32,33 @@ export const metadata: Metadata = {
     'Amazon account management',
     'Apexcale',
   ],
+  icons: {
+    icon: [
+      { url: LOGO_PATH, type: 'image/jpeg' },
+    ],
+    shortcut: LOGO_PATH,
+    apple: LOGO_PATH,
+  },
+  openGraph: {
+    title: 'Apexcale — Scale Your Brand to the Top of Amazon',
+    description:
+      'Full-service Amazon growth partner combining PPC, SEO, and hands-on management.',
+    images: [
+      {
+        url: LOGO_PATH,
+        width: 800,
+        height: 800,
+        alt: 'Apexcale Logo',
+      },
+    ],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Apexcale — Scale Your Brand to the Top of Amazon',
+    description:
+      'Full-service Amazon growth partner combining PPC, SEO, and hands-on management.',
+    images: [LOGO_PATH],
+  },
 };
 
 export default function RootLayout({
@@ -39,6 +68,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${display.variable} ${body.variable}`}>
+      <head>
+        <link rel="icon" href={LOGO_PATH} type="image/jpeg" />
+        <link rel="shortcut icon" href={LOGO_PATH} type="image/jpeg" />
+        <link rel="apple-touch-icon" href={LOGO_PATH} />
+      </head>
       <body>
         <SmoothScrollProvider>
           {children}

@@ -11,19 +11,37 @@ export default function FinalCTA() {
       <AuroraBackground intensity="strong" />
 
       <motion.div
-        className="pointer-events-none absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-white/50 shadow-glass animate-float hidden sm:block"
+        className="pointer-events-none absolute left-1/2 top-1/2 h-16 w-16 -translate-x-1/2 -translate-y-1/2 rounded-2xl bg-white/70 shadow-glass animate-float hidden sm:flex items-center justify-center p-2 border border-white/80"
         aria-hidden="true"
-      />
+      >
+        <img
+          src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+          alt="Apexcale Emblem"
+          className="h-full w-full object-contain rounded-xl"
+        />
+      </motion.div>
       <motion.div
-        className="pointer-events-none absolute left-[20%] top-[30%] h-10 w-10 rounded-xl bg-white/40 shadow-glass animate-float hidden sm:block"
+        className="pointer-events-none absolute left-[20%] top-[30%] h-10 w-10 rounded-xl bg-white/50 shadow-glass animate-float hidden sm:flex items-center justify-center p-1.5 border border-white/80"
         style={{ animationDelay: '1.2s' }}
         aria-hidden="true"
-      />
+      >
+        <img
+          src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+          alt="Apexcale Emblem"
+          className="h-full w-full object-contain rounded-lg"
+        />
+      </motion.div>
       <motion.div
-        className="pointer-events-none absolute right-[18%] bottom-[25%] h-14 w-14 rounded-full bg-white/40 shadow-glass animate-float hidden sm:block"
+        className="pointer-events-none absolute right-[18%] bottom-[25%] h-14 w-14 rounded-2xl bg-white/50 shadow-glass animate-float hidden sm:flex items-center justify-center p-2 border border-white/80"
         style={{ animationDelay: '2.4s' }}
         aria-hidden="true"
-      />
+      >
+        <img
+          src="/assects/WhatsApp Image 2026-08-05 at 5.03.05 PM.jpeg"
+          alt="Apexcale Emblem"
+          className="h-full w-full object-contain rounded-xl"
+        />
+      </motion.div>
 
       <div className="container-px relative z-10 mx-auto max-w-3xl text-center">
         <TextReveal
