@@ -28,16 +28,15 @@ export default function FinalCTA() {
       <div className="container-px relative z-10 mx-auto max-w-3xl text-center">
         <TextReveal
           as="h2"
-          text="Ready to turn ad spend into a growth channel?"
+          text="Ready to Turn Your Amazon Store Into a Predictable Growth Engine?"
           className="justify-center font-display text-4xl font-semibold text-navy text-balance sm:text-5xl lg:text-6xl"
         />
         <p className="mt-6 text-lg text-navy/65">
-          Get a free, no-obligation audit of your PPC, listings, and account
-          health — delivered in 5 business days.
+          Schedule a free strategy call with our team and get a clear, honest assessment of what's holding your account back — and exactly how Apexcale can fix it.
         </p>
         <div className="mt-10 flex justify-center">
           <MagneticButton variant="filled" className="!px-10 !py-5 !text-base" cursorLabel="Start">
-            Book Your Free Audit
+            Schedule Your Free Strategy Call
           </MagneticButton>
         </div>
       </div>

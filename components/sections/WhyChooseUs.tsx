@@ -3,12 +3,11 @@
 import { motion, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { useRef } from 'react';
 import TextReveal from '@/components/ui/TextReveal';
-import Counter from '@/components/ui/Counter';
 
 const TEAM = [
-  { name: 'Rachel Ito', role: 'Head of PPC Strategy', initials: 'RI' },
-  { name: 'Devon Marsh', role: 'Lead Listing Strategist', initials: 'DM' },
-  { name: 'Talia Reyes', role: 'Brand Design Lead', initials: 'TR' },
+  { name: 'One Accountable Team', role: 'Every Marketplace', initials: 'OA' },
+  { name: 'Strategy Backed by Execution', role: 'Implementation Included', initials: 'SE' },
+  { name: 'Senior-Level Attention', role: 'No Junior Handoffs', initials: 'SA' },
 ];
 
 function TiltPhoto({ member }: { member: (typeof TEAM)[number] }) {
@@ -54,11 +53,11 @@ export default function WhyChooseUs() {
       <div className="container-px mx-auto max-w-6xl">
         <div className="mb-14 max-w-2xl">
           <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
-            Why brands switch to us
+            Why Brands Choose Apexcale
           </span>
           <TextReveal
             as="h2"
-            text="Amazon specialists, not generalist marketers."
+            text="What Sets Us Apart"
             className="mt-3 font-display text-4xl font-semibold text-navy sm:text-5xl"
           />
         </div>
@@ -70,27 +69,25 @@ export default function WhyChooseUs() {
 
           <div className="glass flex flex-col justify-center rounded-3xl p-8">
             <div className="font-display text-4xl font-bold text-navy">
-              <Counter value={7} suffix=" yrs" />
+              Built for Compounding
             </div>
             <p className="mt-2 text-sm text-navy/60">
-              Average team experience managing Amazon Seller & Vendor Central
-              accounts exclusively.
+              Long-term growth strategies designed to build durable organic rank, healthy margins, and a brand asset that continues to compound in value over time.
             </p>
           </div>
 
           <div className="glass flex flex-col justify-center rounded-3xl p-8 sm:col-span-2">
             <p className="font-display text-xl font-medium leading-snug text-navy">
-              “We don't take on retainers we can't move the needle on. Every
-              account gets a strategist who reads P&Ls, not just dashboards.”
+              "Full Transparency, Always. You will always know exactly what we're doing, why we're doing it, and how it's performing — through clear, consistent reporting rather than vague dashboards."
             </p>
-            <p className="mt-4 text-sm text-navy/55">— Founding Partner</p>
+            <p className="mt-4 text-sm text-navy/55">— Apexcale Team</p>
           </div>
 
           <div className="glass flex flex-col justify-center rounded-3xl p-8">
             <div className="font-display text-4xl font-bold text-navy">
-              <Counter value={98} suffix="%" />
+              Global Reach
             </div>
-            <p className="mt-2 text-sm text-navy/60">Client retention rate, year over year.</p>
+            <p className="mt-2 text-sm text-navy/60">Amazon, Walmart & major global marketplaces.</p>
           </div>
         </div>
       </div>

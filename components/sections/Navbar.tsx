@@ -68,7 +68,7 @@ export default function Navbar() {
               A
             </span>
             <span className="font-display font-semibold text-navy text-lg">
-              Ascent<span className="text-sky-700">Commerce</span>
+              Apex<span className="text-sky-700">cale</span>
             </span>
           </a>
 

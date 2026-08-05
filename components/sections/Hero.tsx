@@ -63,7 +63,7 @@ export default function Hero() {
 
         <TextReveal
           as="h1"
-          text="Scale your Amazon brand with data, not guesswork."
+          text="Scale Your Brand to the Top of Amazon — Anywhere in the World"
           className="max-w-4xl font-display text-5xl font-semibold text-navy text-balance sm:text-6xl lg:text-7xl"
           triggerOnView={false}
         />
@@ -74,9 +74,7 @@ export default function Hero() {
           transition={{ duration: 0.7, delay: 0.5 }}
           className="mt-8 max-w-xl text-lg text-navy/70"
         >
-          Full-service PPC, SEO, and catalog management for brands that are
-          done leaving Buy Box share and ad spend on the table. We manage the
-          ACOS-to-TACOS math so you can manage the business.
+          Apexcale is a full-service Amazon growth partner for brands that are serious about scaling profitably. We combine data-driven advertising, conversion-focused listing optimization, and hands-on account management to help you win the Buy Box, dominate search results, and turn your marketplace presence into a predictable revenue engine — across Amazon, Walmart, and every major global marketplace.
         </motion.p>
 
         <motion.div
@@ -86,10 +84,10 @@ export default function Hero() {
           className="mt-10 flex flex-wrap items-center gap-4"
         >
           <MagneticButton variant="filled" cursorLabel="Start">
-            Get a Free Account Audit
+            Schedule a Free Strategy Call
           </MagneticButton>
           <MagneticButton variant="glass" cursorLabel="View">
-            See Our Results ↓
+            View Our Results ↓
           </MagneticButton>
         </motion.div>
 

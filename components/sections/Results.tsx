@@ -17,34 +17,34 @@ interface CaseStudy {
 
 const CASES: CaseStudy[] = [
   {
-    brand: 'Northline Outdoor',
-    category: 'Home & Outdoor · FBA',
-    metric: { value: 218, suffix: '%', label: 'Revenue growth, 6 months' },
-    secondaryMetric: { value: 41, suffix: '%', label: 'ACOS reduction' },
+    brand: 'Multi-Marketplace Management',
+    category: 'Amazon, Walmart & Global Platforms',
+    metric: { value: 100, suffix: '%', label: 'Coordinated strategy across all marketplaces' },
+    secondaryMetric: { value: 0, suffix: '', label: 'Fragmented vendors or conflicting priorities' },
     gradient: 'from-sky-600 to-sky-400',
     span: 'lg:col-span-2',
   },
   {
-    brand: 'Verdant Supplement Co.',
-    category: 'Health & Personal Care',
-    metric: { value: 63, suffix: '%', label: 'TACOS improvement' },
-    secondaryMetric: { value: 4, suffix: 'x', label: 'Organic keyword rank' },
+    brand: 'Profit-First Advertising',
+    category: 'Sustainable ACoS & TACoS Targets',
+    metric: { value: 0, suffix: '', label: 'Vanity impression metrics' },
+    secondaryMetric: { value: 100, suffix: '%', label: 'Focus on profitable, sustainable growth' },
     gradient: 'from-cyan-500 to-sky-500',
     span: '',
   },
   {
-    brand: 'Kessler Home Goods',
-    category: 'Kitchen & Dining',
-    metric: { value: 156, suffix: '%', label: 'Sessions growth' },
-    secondaryMetric: { value: 29, suffix: '%', label: 'Conversion rate lift' },
+    brand: 'Proactive Account Health',
+    category: 'Rankings & Buy Box Protection',
+    metric: { value: 100, suffix: '%', label: 'Buy Box share protected' },
+    secondaryMetric: { value: 0, suffix: '', label: 'Listing status issues' },
     gradient: 'from-sky-500 to-indigo-400',
     span: '',
   },
   {
-    brand: 'Alderwood Pet Supply',
-    category: 'Pet Products · Brand Registry',
-    metric: { value: 89, suffix: '%', label: 'Buy Box win rate lift' },
-    secondaryMetric: { value: 12, suffix: '', label: 'New top-10 keywords' },
+    brand: 'Dedicated Senior Strategists',
+    category: 'Consistent Account Oversight',
+    metric: { value: 100, suffix: '%', label: 'Informed, consistent management' },
+    secondaryMetric: { value: 0, suffix: '', label: 'Rotating account managers' },
     gradient: 'from-sky-400 to-cyan-300',
     span: 'lg:col-span-2',
   },
@@ -116,17 +116,16 @@ export default function Results() {
         <div className="mb-14 flex flex-col justify-between gap-6 sm:flex-row sm:items-end">
           <div className="max-w-xl">
             <span className="text-xs font-semibold uppercase tracking-widest text-sky-700">
-              Real accounts, real numbers
+              Results That Matter
             </span>
             <TextReveal
               as="h2"
-              text="Results tied to revenue, not vanity metrics."
+              text="What Sets Our Performance Apart"
               className="mt-3 font-display text-4xl font-semibold text-navy sm:text-5xl"
             />
           </div>
           <p className="max-w-sm text-sm text-navy/60">
-            Every case study below reflects verified account data across a
-            trailing six-month management period.
+            Insert specific client performance data here once available.
           </p>
         </div>
 
