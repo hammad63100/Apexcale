@@ -55,7 +55,7 @@ export default function Navbar() {
         initial={{ y: -40, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        className="fixed top-3 sm:top-4 left-1/2 z-50 w-[92%] sm:w-[94%] max-w-6xl -translate-x-1/2"
+        className="fixed top-3 sm:top-4 inset-x-0 mx-auto z-50 w-[92%] sm:w-[94%] max-w-6xl"
       >
         <div
           className={clsx(
@@ -89,13 +89,14 @@ export default function Navbar() {
           </div>
 
           <button
-            className="flex h-9 w-9 items-center justify-center rounded-full lg:hidden hover:bg-white/40 active:scale-95 transition-transform"
+            className="flex h-9 w-9 items-center justify-center rounded-full lg:hidden hover:bg-white/40 active:scale-95 transition-transform shrink-0"
             onClick={() => setOpen(true)}
             aria-label="Open menu"
           >
-            <div className="space-y-1.5">
-              <span className="block h-0.5 w-5 bg-navy" />
-              <span className="block h-0.5 w-5 bg-navy" />
+            <div className="space-y-1 flex flex-col items-center justify-center">
+              <span className="block h-0.5 w-5 bg-navy rounded-full" />
+              <span className="block h-0.5 w-5 bg-navy rounded-full" />
+              <span className="block h-0.5 w-5 bg-navy rounded-full" />
             </div>
           </button>
         </div>
@@ -143,6 +144,7 @@ export default function Navbar() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.5 }}
               className="mt-4"
+              onClick={() => setOpen(false)}
             >
               <MagneticButton variant="filled" className="!px-8 !py-4 !text-sm">Book a Free Audit</MagneticButton>
             </motion.div>
