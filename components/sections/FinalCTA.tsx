@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import MagneticButton from '@/components/ui/MagneticButton';
 import TextReveal from '@/components/ui/TextReveal';
+import { getAssetPath } from '@/lib/assets';
 
 export default function FinalCTA() {
   return (
@@ -13,7 +14,7 @@ export default function FinalCTA() {
         aria-hidden="true"
       >
         <img
-          src="/assets/logo.jpeg"
+          src={getAssetPath('/assets/logo.jpeg')}
           alt="Apexcale Emblem"
           className="h-full w-full object-contain rounded-xl"
         />
@@ -24,7 +25,7 @@ export default function FinalCTA() {
         aria-hidden="true"
       >
         <img
-          src="/assets/logo.jpeg"
+          src={getAssetPath('/assets/logo.jpeg')}
           alt="Apexcale Emblem"
           className="h-full w-full object-contain rounded-lg"
         />
@@ -35,7 +36,7 @@ export default function FinalCTA() {
         aria-hidden="true"
       >
         <img
-          src="/assets/logo.jpeg"
+          src={getAssetPath('/assets/logo.jpeg')}
           alt="Apexcale Emblem"
           className="h-full w-full object-contain rounded-xl"
         />

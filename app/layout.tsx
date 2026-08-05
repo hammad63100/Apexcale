@@ -16,8 +16,8 @@ const body = Inter({
   display: 'swap',
 });
 
-const LOGO_PATH = '/assets/logo.jpeg';
-const ICON_PATH = '/assets/favicon.ico';
+const LOGO_PATH = '/logo.jpeg';
+const ICON_PATH = '/favicon.ico';
 
 export const metadata: Metadata = {
   title: 'Apexcale — Scale Your Brand to the Top of Amazon',

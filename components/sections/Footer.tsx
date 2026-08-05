@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import MagneticButton from '@/components/ui/MagneticButton';
+import { getAssetPath } from '@/lib/assets';
 
 const COLUMNS = [
   {
@@ -34,7 +35,7 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <div className="relative flex h-10 w-10 items-center justify-center overflow-hidden rounded-xl bg-white p-1 shadow-sm ring-1 ring-black/5">
                   <img
-                    src="/assets/logo.jpeg"
+                    src={getAssetPath('/assets/logo.jpeg')}
                     alt="Apexcale Logo"
                     className="h-full w-full object-contain rounded-lg"
                   />

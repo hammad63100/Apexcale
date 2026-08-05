@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "export-nojekyll": "node -e \"require('fs').writeFileSync('out/.nojekyll', '')\"",
+    "export-nojekyll": "node -e \"const fs=require('fs'); fs.writeFileSync('out/.nojekyll', ''); if (fs.existsSync('public/assets')) fs.cpSync('public/assets', 'out/assets', {recursive: true}); if (fs.existsSync('public/logo.jpeg')) fs.copyFileSync('public/logo.jpeg', 'out/logo.jpeg'); if (fs.existsSync('public/favicon.ico')) fs.copyFileSync('public/favicon.ico', 'out/favicon.ico');\"",
     "predeploy": "npm run build && npm run export-nojekyll",
     "deploy": "npx gh-pages -d out -b gh-pages --dotfiles"
   },
