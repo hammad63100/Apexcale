@@ -72,8 +72,8 @@ export default function Hero() {
           <MagneticButton
             variant="filled"
             cursorLabel="View"
-            className="!px-5 !py-2.5 !text-xs whitespace-nowrap shrink-0 !text-white !border border-amber-300/40 shadow-md !important"
-            style={{ background: 'linear-gradient(135deg, #FF5E00 0%, #FFAA00 100%) !important' }}
+            className="!px-5 !py-2.5 !text-xs whitespace-nowrap shrink-0 !text-white !border border-amber-300/40 shadow-md"
+            style={{ background: 'linear-gradient(135deg, #FF5E00 0%, #FFAA00 100%)' }}
           >
             View Our Results ↓
           </MagneticButton>
