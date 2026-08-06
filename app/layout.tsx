@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import { Bricolage_Grotesque, Inter } from 'next/font/google';
 import './globals.css';
 import SmoothScrollProvider from '@/lib/SmoothScrollProvider';
-import CustomCursor from '@/components/ui/CustomCursor';
 
 const display = Bricolage_Grotesque({
   subsets: ['latin'],
